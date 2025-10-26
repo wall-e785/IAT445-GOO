@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class PlayerCollision : MonoBehaviour
     public Transform floorReference;
 
     CapsuleCollider myCollider;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
