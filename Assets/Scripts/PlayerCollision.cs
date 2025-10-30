@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class PlayerCollision : MonoBehaviour
     public Transform floorReference;
 
     CapsuleCollider myCollider;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,8 +23,6 @@ public class PlayerCollision : MonoBehaviour
     {
         float height = head.position.y - floorReference.position.y;
         myCollider.height = height;
-        transform.position = head.position - Vector3.up * height/2;
+        transform.position = head.position - Vector3.up * height / 2;
     }
 }
-
-
