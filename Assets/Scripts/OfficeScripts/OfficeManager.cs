@@ -11,7 +11,7 @@ public class OfficeManager : MonoBehaviour
     private void Awake()
     {
         AudioManager.Instance.PlaySound("office-1");
-        UIManager.Instance.setText("Eat and grow, then find a way out.");
+        UIManager.Instance.setText("Eat and grow.");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

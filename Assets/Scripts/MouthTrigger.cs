@@ -100,6 +100,7 @@ public class MouthTrigger : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 AudioManager.Instance.PlaySound("office-3");
+                UIManager.Instance.setText("Find a way to escape.");
 
             }
         }
