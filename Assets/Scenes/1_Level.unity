@@ -307,7 +307,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -423,7 +424,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -524,7 +526,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
