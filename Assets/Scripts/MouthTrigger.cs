@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using static System.TimeZoneInfo;
 
 //i initially wrote this script based off of this tutorial for the food: https://www.youtube.com/watch?v=7dj1m0Izyi0
 //following this, i tried to modify it by adding the scale/position which did not work. The update, ontriggerenter were modified using Microsoft Copilot
@@ -27,6 +29,11 @@ public class MouthTrigger : MonoBehaviour
     float smallLift = 0.3f;
     float mediumLift = 0.6f;
     float largeLift = 1.0f;
+
+    // Other Triggers
+    private bool firstTime = true;
+    private int eatCount = 0;
+
 
     void Start()
     {
@@ -58,22 +65,43 @@ public class MouthTrigger : MonoBehaviour
 
         if (other.CompareTag("SmallFood"))
         {
+            if(SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                if (firstTime)
+                {
+                    AudioManager.Instance.PlaySound("office-2.1");
+                    StartCoroutine(playDelay("office-2.2", 9));
+                    firstTime = false;
+                }
+            }
             liftAmount = smallLift;
             scaleIncrement = smallFoodScale;
+            eatCount++;
         }
         else if (other.CompareTag("MediumFood"))
         {
             liftAmount = mediumLift;
             scaleIncrement = mediumFoodScale;
+            eatCount++;
         }
         else if (other.CompareTag("LargeFood"))
         {
             liftAmount = largeLift;
             scaleIncrement = largeFoodScale;
+            eatCount++;
         }
         else
         {
             return;
+        }
+
+        if (eatCount == 4)
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                AudioManager.Instance.PlaySound("office-3");
+
+            }
         }
 
         Destroy(other.transform.parent.gameObject);
@@ -116,4 +144,9 @@ public class MouthTrigger : MonoBehaviour
         xrOrigin.localScale = targetScale;
     }
 
+    IEnumerator playDelay(string clipName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlaySound(clipName);
+    }
 }
