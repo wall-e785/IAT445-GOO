@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using static System.TimeZoneInfo;
+using UnityEngine.Events;
 
 //i initially wrote this script based off of this tutorial for the food: https://www.youtube.com/watch?v=7dj1m0Izyi0
 //following this, i tried to modify it by adding the scale/position which did not work. The update, ontriggerenter were modified using Microsoft Copilot
@@ -11,13 +12,10 @@ using static System.TimeZoneInfo;
 public class MouthTrigger : MonoBehaviour
 {
     public Transform cameraTransform;
-    public Transform floorReference;
     public float height = 1;
     private float maxHeight;
 
-    public XRInteractionSimulator simulator;
     public InputActionReference translateYAxis;
-    public float speed = 1.0f;
     public Transform xrOrigin; // Assign this to your XR Origin GameObject
 
     // Scale increments
@@ -33,27 +31,26 @@ public class MouthTrigger : MonoBehaviour
     // Other Triggers
     private bool firstTime = true;
     private int eatCount = 0;
+    public UnityEvent<Vector3, float> onTriggered;
+
 
 
     void Start()
     {
-        if (floorReference != null)
-        {
-            maxHeight = floorReference.position.y + height;
-        }
+
     }
 
     void Update()
     {
-        // Optional: clamp camera height if needed
-        if (cameraTransform.localPosition.y >= 3)
-        {
-            cameraTransform.localPosition = new Vector3(
-                cameraTransform.localPosition.x,
-                3,
-                cameraTransform.localPosition.z
-            );
-        }
+        //// Optional: clamp camera height if needed
+        //if (cameraTransform.localPosition.y >= 3)
+        //{
+        //    cameraTransform.localPosition = new Vector3(
+        //        cameraTransform.localPosition.x,
+        //        3,
+        //        cameraTransform.localPosition.z
+        //    );
+        //}
     }
 
     public void OnTriggerEnter(Collider other)
@@ -62,57 +59,62 @@ public class MouthTrigger : MonoBehaviour
 
         float liftAmount = 0f;
         Vector3 scaleIncrement = Vector3.zero;
+        float delayIncrement = 0;
 
-        if (other.CompareTag("SmallFood"))
+        if(other.CompareTag("SmallFood") || other.CompareTag("MediumFood") || other.CompareTag("LargeFood"))
         {
-            if(SceneManager.GetActiveScene().buildIndex == 1)
+            switch (other.tag)
             {
-                if (firstTime)
+                case "SmallFood":
+                    if (SceneManager.GetActiveScene().buildIndex == 1)
+                    {
+                        if (firstTime)
+                        {
+                            AudioManager.Instance.PlaySound("office-2.1");
+                            StartCoroutine(playDelay("office-2.2", 9));
+                            firstTime = false;
+                        }
+                    }
+                    liftAmount = smallLift;
+                    scaleIncrement = smallFoodScale;
+                    delayIncrement = .5f;
+                    eatCount++;
+                    break;
+                case "MediumFood":
+                    liftAmount = mediumLift;
+                    scaleIncrement = mediumFoodScale;
+                    delayIncrement = 1f;
+                    eatCount++;
+                    break;
+                case "LargeFood":
+                    liftAmount = largeLift;
+                    scaleIncrement = largeFoodScale;
+                    delayIncrement = 1.5f;
+                    eatCount++;
+                    break;
+            }
+
+            if (eatCount == 4)
+            {
+                if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
-                    AudioManager.Instance.PlaySound("office-2.1");
-                    StartCoroutine(playDelay("office-2.2", 9));
-                    firstTime = false;
+                    AudioManager.Instance.PlaySound("office-3");
+                    UIManager.Instance.setText("Find a way to escape.");
+
                 }
             }
-            liftAmount = smallLift;
-            scaleIncrement = smallFoodScale;
-            eatCount++;
-        }
-        else if (other.CompareTag("MediumFood"))
-        {
-            liftAmount = mediumLift;
-            scaleIncrement = mediumFoodScale;
-            eatCount++;
-        }
-        else if (other.CompareTag("LargeFood"))
-        {
-            liftAmount = largeLift;
-            scaleIncrement = largeFoodScale;
-            eatCount++;
-        }
-        else
-        {
-            return;
+
+            Destroy(other.transform.parent.gameObject);
+            onTriggered?.Invoke(scaleIncrement, delayIncrement);
+
+            // Animate lift and scale
+            //Vector3 targetPosition = xrOrigin.position + new Vector3(0, liftAmount, 0);
+            //Vector3 targetScale = xrOrigin.localScale + scaleIncrement;
+
+            //StartCoroutine(LiftPlayer(targetPosition, 1.5f));
+            //StartCoroutine(ScalePlayer(targetScale, 1.5f));
         }
 
-        if (eatCount == 4)
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 1)
-            {
-                AudioManager.Instance.PlaySound("office-3");
-                UIManager.Instance.setText("Find a way to escape.");
-
-            }
-        }
-
-        Destroy(other.transform.parent.gameObject);
-
-        // Animate lift and scale
-        Vector3 targetPosition = xrOrigin.position + new Vector3(0, liftAmount, 0);
-        Vector3 targetScale = xrOrigin.localScale + scaleIncrement;
-
-        //StartCoroutine(LiftPlayer(targetPosition, 1.5f));
-        StartCoroutine(ScalePlayer(targetScale, 1.5f));
     }
 
     IEnumerator LiftPlayer(Vector3 targetPosition, float duration)
