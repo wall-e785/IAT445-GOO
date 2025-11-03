@@ -9,6 +9,10 @@ TagManager:
   - LargeFood
   - Button
   - Goo
+  - Screw1
+  - Screw2
+  - Screw3
+  - Screw4
   layers:
   - Default
   - TransparentFX
