@@ -2,11 +2,6 @@ using UnityEngine;
 
 public class OfficeManager : MonoBehaviour
 {
-    public AudioClip office1;
-    public AudioClip office2_1;
-    public AudioClip office2_2;
-    public AudioClip office3;
-
 
     private void Awake()
     {
