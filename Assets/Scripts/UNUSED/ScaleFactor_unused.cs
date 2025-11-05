@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ScaleFactor : MonoBehaviour
+public class ScaleFactor_unused : MonoBehaviour
 {
 
     public float scaleMultiplier = 1.0f;

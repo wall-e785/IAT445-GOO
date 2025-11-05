@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class inputTest : MonoBehaviour
+public class inputTest_unused : MonoBehaviour
 {
     public InputActionProperty testActionValue;
     public InputActionProperty testActionButton;
