@@ -13,6 +13,9 @@ TagManager:
   - Screw2
   - Screw3
   - Screw4
+  - Food
+  - Grab
+  - Enemy
   layers:
   - Default
   - TransparentFX
