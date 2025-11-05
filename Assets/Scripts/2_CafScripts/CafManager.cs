@@ -3,12 +3,14 @@ using System.Collections;
 
 public class CafManager : MonoBehaviour
 {
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         AudioManager.Instance.PlaySound("caf-1");
         UIManager.Instance.setText("Eat and grow. Avoid the CatBot.");
-        StartCoroutine(playDelay("caf-2", 2));
+        StartCoroutine(playDelay("caf-2", 1.2f));
+
     }
 
     IEnumerator playDelay(string clipName, float delay)
