@@ -14,6 +14,6 @@ public class TutorialManager : MonoBehaviour
 
     private void OnStartButtonClicked()
     {
-        AudioManager.Instance.PlaySound("tutorial-1");
+        //AudioManager.Instance.PlaySound("tutorial-1");
     }
 }
