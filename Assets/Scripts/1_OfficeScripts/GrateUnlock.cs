@@ -6,6 +6,7 @@ public class GrateUnlock : MonoBehaviour
     public GameObject screw2;
     public GameObject screw3;
     public GameObject screw4;
+    public GameObject sceneTrigger;
     
     private bool unlocked = false;
 
@@ -19,6 +20,7 @@ public class GrateUnlock : MonoBehaviour
                 rb.constraints = RigidbodyConstraints.None;
             }
 
+            sceneTrigger.SetActive(true);
             unlocked = true;
         }
     }
