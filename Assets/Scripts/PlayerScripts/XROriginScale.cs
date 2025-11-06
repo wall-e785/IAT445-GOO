@@ -24,7 +24,8 @@ public class XROriginScale : MonoBehaviour
         {
             if(SceneManager.GetActiveScene().buildIndex == 1)
             {
-                xrOriginTransform.localScale += new Vector3(.1f, .1f, .1f);
+                //xrOriginTransform.localScale += new Vector3(.1f, .1f, .1f);
+                GrowPlayer();
             }
             else
             {

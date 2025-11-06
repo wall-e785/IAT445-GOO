@@ -77,19 +77,19 @@ public class MouthTrigger : MonoBehaviour
                     }
                     liftAmount = smallLift;
                     scaleIncrement = smallFoodScale;
-                    delayIncrement = .5f;
+                    delayIncrement = .2f;
                     eatCount++;
                     break;
                 case "MediumFood":
                     liftAmount = mediumLift;
                     scaleIncrement = mediumFoodScale;
-                    delayIncrement = 1f;
+                    delayIncrement = .4f;
                     eatCount++;
                     break;
                 case "LargeFood":
                     liftAmount = largeLift;
                     scaleIncrement = largeFoodScale;
-                    delayIncrement = 1.5f;
+                    delayIncrement = .6f;
                     eatCount++;
                     break;
             }
