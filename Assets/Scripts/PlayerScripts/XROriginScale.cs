@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 public class XROriginScale : MonoBehaviour
 {
     public Transform xrOriginTransform;
+    public Transform camera;
+
     private bool grow = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,7 +22,22 @@ public class XROriginScale : MonoBehaviour
     {
         if (grow)
         {
-            xrOriginTransform.localScale += new Vector3(.1f, .1f, .1f);
+            int currScene = SceneManager.GetActiveScene().buildIndex;
+            if (currScene == 1)
+            {
+                //xrOriginTransform.localScale += new Vector3(.1f, .1f, .1f);
+                GrowPlayer(.01f);
+            }else if(currScene == 2)
+            {
+                GrowPlayer(.008f);
+            }else
+            {
+                //xrOriginTransform.localScale += new Vector3(.05f, .05f, .05f);
+                GrowPlayer(.05f);
+
+                //TEMP TESTING FOR CAM
+                //xrOriginTransform.localPosition += new Vector3(.1f, .1f, .1f);
+            }
         }
     }
 
@@ -51,5 +70,71 @@ public class XROriginScale : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         grow = false;
+    }
+
+    private void GrowPlayer(float amnt)
+    {
+
+        // Adjust CharacterController, adjust the height and radius of body manually based off the shrink factor
+        CharacterController cc = GetComponent<CharacterController>();
+        if (cc != null)
+        {
+            cc.height = cc.height+ amnt;//multiplies the character controller height by shrink factor
+            cc.radius = cc.radius+ .001f;//multiplies the character controller body radius by shrink factor
+            cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
+            Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
+        }
+        else
+        {
+            Debug.LogWarning("CharacterController not found");
+        }
+
+        // Adjust Camera Offset height, moves the players view down as origin and the controls shrink. makes it appear smaller
+        Transform cameraOffset = transform.Find("Camera Offset");
+        if (cameraOffset != null)
+        {
+            Vector3 offsetPos = cameraOffset.localPosition;
+            offsetPos.y += amnt;//multiply the verticle position of the camera by the shrink factor
+            //offsetPos.y = Mathf.Min(offsetPos.y, 2); // Clamp to avoid going underground
+            cameraOffset.localPosition = offsetPos;
+            Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
+        }
+        else
+        {
+            Debug.LogWarning("Camera Offset not found");
+        }
+    }
+
+    public void ShrinkPlayer()
+    {
+
+        // Adjust CharacterController, adjust the height and radius of body manually based off the shrink factor
+        CharacterController cc = GetComponent<CharacterController>();
+        if (cc != null)
+        {
+            cc.height = cc.height - .3f;//multiplies the character controller height by shrink factor
+            cc.radius = cc.radius -.3f;//multiplies the character controller body radius by shrink factor
+            cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
+            Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
+        }
+        else
+        {
+            Debug.LogWarning("CharacterController not found");
+        }
+
+        // Adjust Camera Offset height, moves the players view down as origin and the controls shrink. makes it appear smaller
+        Transform cameraOffset = transform.Find("Camera Offset");
+        if (cameraOffset != null)
+        {
+            Vector3 offsetPos = cameraOffset.localPosition;
+            offsetPos.y -= .3f;//multiply the verticle position of the camera by the shrink factor
+            //offsetPos.y = Mathf.Min(offsetPos.y, 2); // Clamp to avoid going underground
+            cameraOffset.localPosition = offsetPos;
+            Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
+        }
+        else
+        {
+            Debug.LogWarning("Camera Offset not found");
+        }
     }
 }
