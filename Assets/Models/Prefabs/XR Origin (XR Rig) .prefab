@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3524394122255964103}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -31.51, y: 61.596, z: 115.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -275,7 +275,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: -0.064, z: 0.261}
-  m_LocalScale: {x: 0.21749088, y: 0.21749088, z: 0.21749088}
+  m_LocalScale: {x: 0.10406939, y: 0.10406939, z: 0.10406939}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3576701622501323134}
@@ -714,7 +714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 93, y: 91}
+  m_AnchoredPosition: {x: 88, y: 91}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7717962686214595231
@@ -783,8 +783,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4845045226518022102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.07}
-  m_LocalScale: {x: 0.019724261, y: 0.019724261, z: 0.019724261}
+  m_LocalPosition: {x: 0, y: 0, z: 1.86}
+  m_LocalScale: {x: 0.013360821, y: 0.013360821, z: 0.013360821}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4322842118745872645}
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 7962968812155573832}
   m_TransformationPriority: 0
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 5
   m_InAirControlModifier: 0.5
   m_EnableStrafe: 1
   m_EnableFly: 0
@@ -1364,7 +1364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88.836, y: 93.31923}
+  m_AnchoredPosition: {x: 83.83608, y: 93.31923}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2214787879189385189
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_UnlimitedInAirJumps: 1
   m_InAirJumpCount: 1
   m_JumpForgivenessWindow: 0.25
-  m_JumpHeight: 10
+  m_JumpHeight: 12
   m_VariableHeightJump: 1
   m_MinJumpHoldTime: 0.1
   m_MaxJumpHoldTime: 0.5
@@ -1658,7 +1658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.268, y: 93.51023}
+  m_AnchoredPosition: {x: 66.26808, y: 93.51023}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3457263869027124584

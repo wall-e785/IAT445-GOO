@@ -26,7 +26,7 @@ public class XROriginScale : MonoBehaviour
             if (currScene == 1)
             {
                 //xrOriginTransform.localScale += new Vector3(.1f, .1f, .1f);
-                GrowPlayer(.01f);
+                GrowPlayer(.03f);
             }else if(currScene == 2)
             {
                 GrowPlayer(.008f);
