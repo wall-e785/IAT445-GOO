@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class CatBotStun : MonoBehaviour
 {
 
     public GameObject simulator;
     private bool soundPlayed = false;
+
+    public UnityEvent onTriggered;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -17,6 +20,7 @@ public class CatBotStun : MonoBehaviour
                 AudioManager.Instance.PlaySound("caf-death");
                 soundPlayed = true;
             }
+            onTriggered?.Invoke();
             StartCoroutine(stunDelay());
         }
     }
