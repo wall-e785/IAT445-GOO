@@ -1547,10 +1547,10 @@ MonoBehaviour:
   m_Mediator: {fileID: 7962968812155573832}
   m_TransformationPriority: 0
   m_DisableGravityDuringJump: 0
-  m_UnlimitedInAirJumps: 0
+  m_UnlimitedInAirJumps: 1
   m_InAirJumpCount: 1
   m_JumpForgivenessWindow: 0.25
-  m_JumpHeight: 1.25
+  m_JumpHeight: 10
   m_VariableHeightJump: 1
   m_MinJumpHoldTime: 0.1
   m_MaxJumpHoldTime: 0.5
@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_UseGravity: 1
   m_UseLocalSpaceGravity: 1
   m_TerminalVelocity: 90
-  m_GravityAccelerationModifier: 1
+  m_GravityAccelerationModifier: 4
   m_UpdateCharacterControllerCenterEachFrame: 1
   m_SphereCastRadius: 0.09
   m_SphereCastDistanceBuffer: -0.05
