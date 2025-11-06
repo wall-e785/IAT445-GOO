@@ -10,7 +10,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
     }
     void Update()
     {
