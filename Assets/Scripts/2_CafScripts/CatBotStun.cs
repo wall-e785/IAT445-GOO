@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class CatBotStun : MonoBehaviour
 {
 
-    public GameObject simulator;
+    public GameObject locomotion;
     private bool soundPlayed = false;
 
     public UnityEvent onTriggered;
@@ -14,7 +14,7 @@ public class CatBotStun : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            simulator.SetActive(false);
+            locomotion.SetActive(false);
             if (!soundPlayed)
             {
                 AudioManager.Instance.PlaySound("caf-death");
@@ -28,7 +28,7 @@ public class CatBotStun : MonoBehaviour
     IEnumerator stunDelay()
     {
         yield return new WaitForSeconds(2);
-        simulator.SetActive(true);
+        locomotion.SetActive(true);
     }
 
 }

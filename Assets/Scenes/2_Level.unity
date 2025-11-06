@@ -3933,11 +3933,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383097100}
   m_Mesh: {fileID: 3008240116567095485, guid: 68fa334768e50304cab11de830aea43c, type: 3}
---- !u!1 &396602929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-  m_PrefabInstance: {fileID: 415846418}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &415846418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13809,6 +13804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1532984066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6073339402791741641, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+  m_PrefabInstance: {fileID: 1532984064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1535603784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15834,7 +15834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633490498370244702, guid: 9650fb460096ac64b8c2580777d68d7e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6965297328984521942, guid: 9650fb460096ac64b8c2580777d68d7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17851,7 +17851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d37ceea5ff7f034f88cafd20341e7b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatBotStun
-  simulator: {fileID: 396602929}
+  locomotion: {fileID: 1532984066}
   onTriggered:
     m_PersistentCalls:
       m_Calls:
