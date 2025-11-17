@@ -4,6 +4,10 @@ using UnityEngine;
 public class GooGrow : MonoBehaviour
 {
     public Transform gooSize;
+    [SerializeField] private float xMax;
+    [SerializeField] private float yMax;
+    [SerializeField] private float zMax;
+
 
     void Start()
     {
@@ -16,14 +20,14 @@ public class GooGrow : MonoBehaviour
         float y = 0;
         float z = 0;
 
-        if (gooSize.localScale.x < 1f) x = 0.003f;
-        if (gooSize.localScale.y < 2.6f) y = 0.003f;
-        if (gooSize.localScale.z < 1f) z = 0.003f;
+        if (gooSize.localScale.x < xMax) x = 0.003f;
+        if (gooSize.localScale.y < yMax) y = 0.006f;
+        if (gooSize.localScale.z < zMax) z = 0.003f;
 
         Vector3 newScale = gooSize.localScale + new Vector3(x, y, z);
-        newScale.x = Mathf.Min(newScale.x, 1f);
-        newScale.y = Mathf.Min(newScale.y, 2.6f);
-        newScale.z = Mathf.Min(newScale.z, 1f);
+        newScale.x = Mathf.Min(newScale.x, xMax);
+        newScale.y = Mathf.Min(newScale.y, yMax);
+        newScale.z = Mathf.Min(newScale.z, zMax);
 
         gooSize.localScale = newScale;
     }

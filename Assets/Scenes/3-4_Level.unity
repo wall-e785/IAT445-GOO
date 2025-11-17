@@ -19636,7 +19636,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1659465790649605515, guid: af7c9e951f608ec4b905dcfce5f32987, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2484326010369453696, guid: af7c9e951f608ec4b905dcfce5f32987, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3794965940760974776, guid: af7c9e951f608ec4b905dcfce5f32987, type: 3}
@@ -216381,6 +216382,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GooGrow
   gooSize: {fileID: 0}
+  xMax: 0
+  yMax: 0
+  zMax: 0
 --- !u!33 &7844478141811565830
 MeshFilter:
   m_ObjectHideFlags: 0
