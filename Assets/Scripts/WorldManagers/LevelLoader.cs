@@ -6,11 +6,19 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1;
+    public static LevelLoader instance;
 
-
-    private void Start()
+    private void Awake()
     {
-        //DontDestroyOnLoad(this);
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
     }
     void Update()
     {
@@ -31,8 +39,9 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        transition.SetTrigger("Start");
+        instance.transition.SetBool("Start", true);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
+        instance.transition.SetBool("Start", false);
     }
 }
