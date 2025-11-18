@@ -29,7 +29,6 @@ public class MouthTrigger : MonoBehaviour
     float largeLift = 1.0f;
 
     // Other Triggers
-    private bool firstTime = true;
     private int eatCount = 0;
     public UnityEvent<Vector3, float> onTriggered;
 
@@ -66,15 +65,6 @@ public class MouthTrigger : MonoBehaviour
             switch (other.tag)
             {
                 case "SmallFood":
-                    if (SceneManager.GetActiveScene().buildIndex == 1)
-                    {
-                        if (firstTime)
-                        {
-                            AudioManager.Instance.PlaySound("office-2.1");
-                            StartCoroutine(playDelay("office-2.2", 9));
-                            firstTime = false;
-                        }
-                    }
                     liftAmount = smallLift;
                     scaleIncrement = smallFoodScale;
                     delayIncrement = .2f;

@@ -16,10 +16,6 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
         }
-        else
-        {
-            Debug.LogError("Should not have more than 1 AudioManager");
-        }
 
         for (int i = 0; i < audioSources.Length; ++i)
         {
