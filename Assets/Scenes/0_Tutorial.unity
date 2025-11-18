@@ -5625,7 +5625,7 @@ PrefabInstance:
     - target: {fileID: 3028585378247706207, guid: 9650fb460096ac64b8c2580777d68d7e, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 258947579}
+      objectReference: {fileID: 0}
     - target: {fileID: 5633490498370244702, guid: 9650fb460096ac64b8c2580777d68d7e, type: 3}
       propertyPath: m_Name
       value: LevelLoader

@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public TextMeshProUGUI taskText;
+    public TextMeshProUGUI gooThoughts;
 
     private void Awake()
     {
@@ -16,6 +17,11 @@ public class UIManager : MonoBehaviour
     public void setText(string text)
     {
         taskText.text = text;
+    }
+
+    public void setThought(string text)
+    {
+        gooThoughts.text = text;
     }
 
 }
