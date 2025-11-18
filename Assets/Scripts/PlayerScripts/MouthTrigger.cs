@@ -84,12 +84,12 @@ public class MouthTrigger : MonoBehaviour
                     break;
             }
 
-            if (eatCount == 4)
+            if (eatCount == 1)
             {
-                if (SceneManager.GetActiveScene().buildIndex == 1)
+                if (SceneManager.GetActiveScene().name == "1_Level")
                 {
                     AudioManager.Instance.PlaySound("office-3");
-                    UIManager.Instance.setText("Find a way to escape.");
+                    UIManager.Instance.setText("Create a path to the vent.");
 
                 }
             }
