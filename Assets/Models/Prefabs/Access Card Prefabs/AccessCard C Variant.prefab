@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2287376219644101528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5141648053655326839, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afaac96d062cf246aed42df369ffc8b, type: 2}
+    - target: {fileID: 5141648053655326839, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 03a48c182883e7e4caafa154ec172a73, type: 2}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -37.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274043650312481560, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654686211507745186, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
+      propertyPath: m_Name
+      value: AccessCard C Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5359c7d333512b4a9321c3a7f7e5d14, type: 3}
