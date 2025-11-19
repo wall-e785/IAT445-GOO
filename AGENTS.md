@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: trash path
+  - Name: WarehouseSlidingDoor
   - Tag: Untagged
-  - Layer: Default
+  - Layer: 6
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
