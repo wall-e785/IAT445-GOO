@@ -2669,7 +2669,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5236,7 +5237,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &401282163
 MonoBehaviour:
@@ -5245,7 +5246,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401282157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -9154,7 +9155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122288386652707639, guid: ae4812b4085471e4d9fa91c480747f82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.688032
+      value: -10.44
       objectReference: {fileID: 0}
     - target: {fileID: 1122288386652707639, guid: ae4812b4085471e4d9fa91c480747f82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9511,7 +9512,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 40
+    spring: 30
     damper: 30
     targetPosition: 0
   m_UseMotor: 0
@@ -12552,7 +12553,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &995836129
 MonoBehaviour:
@@ -12561,7 +12562,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995836123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -17701,6 +17702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409785592}
   - component: {fileID: 1409785593}
+  - component: {fileID: 1409785594}
   m_Layer: 0
   m_Name: SizeChecker
   m_TagString: Untagged
@@ -17744,6 +17746,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.390195, y: 3.492294, z: 2.5083768}
   m_Center: {x: 0.033993028, y: 1.2461466, z: 0.14523278}
+--- !u!114 &1409785594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409785591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02dfb1b78a935945b018f23da276c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CafSizeCheck
+  blockerOne: {fileID: 995836123}
+  blockerTwo: {fileID: 401282157}
 --- !u!1001 &1427133399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19318,6 +19334,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1409785594}
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sizeCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CafSizeCheck, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: CafSizeCheck.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3371250429404600467, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -8.064032

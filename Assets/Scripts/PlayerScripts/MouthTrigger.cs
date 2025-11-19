@@ -5,6 +5,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using static System.TimeZoneInfo;
 using UnityEngine.Events;
+using NUnit.Framework.Constraints;
+using System;
 
 //i initially wrote this script based off of this tutorial for the food: https://www.youtube.com/watch?v=7dj1m0Izyi0
 //following this, i tried to modify it by adding the scale/position which did not work. The update, ontriggerenter were modified using Microsoft Copilot
@@ -31,6 +33,7 @@ public class MouthTrigger : MonoBehaviour
     // Other Triggers
     private int eatCount = 0;
     public UnityEvent<Vector3, float> onTriggered;
+    public UnityEvent CafSizeCheck;
 
 
 
@@ -74,25 +77,38 @@ public class MouthTrigger : MonoBehaviour
                     liftAmount = mediumLift;
                     scaleIncrement = mediumFoodScale;
                     delayIncrement = .4f;
-                    eatCount++;
+                    eatCount+=2;
                     break;
                 case "LargeFood":
                     liftAmount = largeLift;
                     scaleIncrement = largeFoodScale;
                     delayIncrement = .6f;
-                    eatCount++;
+                    eatCount+=3;
                     break;
             }
 
-            if (eatCount == 1)
-            {
-                if (SceneManager.GetActiveScene().name == "1_Level")
-                {
-                    AudioManager.Instance.PlaySound("office-3");
-                    UIManager.Instance.setText("Create a path to the vent.");
+            Debug.Log("EatCount: " + eatCount);
 
-                }
+            //switch to check for eatCount for each scene's specific puzzle.
+            switch(SceneManager.GetActiveScene().name){
+                case "1_Level": //checks for the office level
+                    if (eatCount >= 1)
+                    {
+                        AudioManager.Instance.PlaySound("office-3");
+                        UIManager.Instance.setText("Create a path to the vent.");
+                    }
+                    break;
+                case "2_Level": //checks for the caf level
+                    if(eatCount >= 18)
+                    {
+                        CafSizeCheck?.Invoke();
+                        UIManager.Instance.setText("Escape through the garbage chute.");
+                    }
+                    break;
             }
+
+
+
 
             Destroy(other.transform.parent.gameObject);
             onTriggered?.Invoke(scaleIncrement, delayIncrement);
