@@ -10,6 +10,7 @@ public class CheckKey : MonoBehaviour
     {
         if(other.tag == "WarehouseKey" && !activated)
         {
+            Debug.Log("door opening");
             activated = true;
             doorController.SetBool("Opening", true);
             Destroy(other.gameObject);
