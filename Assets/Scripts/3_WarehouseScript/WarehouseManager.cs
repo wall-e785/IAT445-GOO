@@ -5,7 +5,7 @@ public class WarehouseManager : MonoBehaviour
     private void Awake()
     {
         AudioManager.Instance.PlaySound("warehouse-1");
-        UIManager.Instance.setText("Escape the Garbage Room");
+        UIManager.Instance.setText("Find the Key Card to the Security Room.");
     }
 
     void Start()
