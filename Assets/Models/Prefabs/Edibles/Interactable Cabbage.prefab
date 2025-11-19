@@ -225,9 +225,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 527466067957362732}
-  - component: {fileID: 3875822302942033769}
+  - component: {fileID: 132785878372600700}
   m_Layer: 0
-  m_Name: Sphere_COL
+  m_Name: Collider
   m_TagString: MediumFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,14 +242,14 @@ Transform:
   m_GameObject: {fileID: 6651342008265180325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.138, z: 0}
-  m_LocalScale: {x: 1.5385394, y: 1.2983669, z: 1.548647}
+  m_LocalPosition: {x: 0, y: -0.041507, z: 0}
+  m_LocalScale: {x: 0.7243691, y: 1.5094812, z: 0.1717208}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5057001909529903794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3875822302942033769
-SphereCollider:
+--- !u!65 &132785878372600700
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -267,8 +267,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.062137518
-  m_Center: {x: 0, y: -0.007941255, z: 0}
+  m_Size: {x: 0.24, y: 0.10931758, z: 1}
+  m_Center: {x: 0, y: 0.12040682, z: 0}
 --- !u!1001 &393292738311237148
 PrefabInstance:
   m_ObjectHideFlags: 0

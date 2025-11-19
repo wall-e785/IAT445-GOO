@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8715488760432751066}
   - component: {fileID: 1803747641408650762}
   - component: {fileID: 3719123826820039394}
-  - component: {fileID: 3858180759216080480}
+  - component: {fileID: 4671586788857772969}
   m_Layer: 0
   m_Name: Cube_COL
   m_TagString: MediumFood
@@ -90,8 +90,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3858180759216080480
-MeshCollider:
+--- !u!65 &4671586788857772969
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,10 +108,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 3
+  m_Size: {x: 1.0000005, y: 0.99999994, z: 1.0000005}
+  m_Center: {x: 0, y: 0.0000019073486, z: 0.0000038146973}
 --- !u!1 &8483140058600620237
 GameObject:
   m_ObjectHideFlags: 0

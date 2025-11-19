@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4674246554551648279}
   - component: {fileID: 2896870495822157060}
   - component: {fileID: 3257599029824735495}
-  - component: {fileID: 6330746344062716296}
+  - component: {fileID: 7276443694473001142}
   m_Layer: 0
   m_Name: Cube_COL
   m_TagString: SmallFood
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1056197861172842050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.04799843, y: 0.011, z: 0.12999988}
-  m_LocalScale: {x: 0.24098647, y: 0.041231398, z: 0.22147907}
+  m_LocalPosition: {x: 0.04799843, y: 0.0044, z: 0.12999988}
+  m_LocalScale: {x: 0.24098647, y: 0.019578677, z: 0.22147907}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8626808437333725136}
@@ -90,8 +90,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6330746344062716296
-MeshCollider:
+--- !u!65 &7276443694473001142
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,10 +108,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5477718719435368258
 GameObject:
   m_ObjectHideFlags: 0

@@ -225,9 +225,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8162418988681815178}
-  - component: {fileID: 1099178965076068227}
+  - component: {fileID: 5470378834339614146}
   m_Layer: 0
-  m_Name: Cylinder_COL
+  m_Name: Collider
   m_TagString: SmallFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,14 +242,14 @@ Transform:
   m_GameObject: {fileID: 3051653793615930382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.138, z: 0}
-  m_LocalScale: {x: 1.5385394, y: 1.2983669, z: 1.548647}
+  m_LocalPosition: {x: -0.0049, y: 0.1329, z: 0.0011}
+  m_LocalScale: {x: 0.14858182, y: 0.15610297, z: 0.13490324}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7227778778886341352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1099178965076068227
-MeshCollider:
+--- !u!65 &5470378834339614146
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -266,10 +266,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5076798556035486163, guid: 73b694bb0f61cd14e9e1ed7b578ac09a, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &263426446195515977
 PrefabInstance:
   m_ObjectHideFlags: 0
