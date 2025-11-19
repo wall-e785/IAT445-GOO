@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: WarehouseSlidingDoor
-  - Tag: Untagged
-  - Layer: 6
+  - Name: Rat
+  - Tag: Rat
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
