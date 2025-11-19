@@ -47,7 +47,7 @@ public class CafSizeCheck : MonoBehaviour
             if (!displaying)
             {
                 displaying = true;
-                StartCoroutine(Display("Goo... Need Food..."));
+                StartCoroutine(Display("Goo... Need MORE Food..."));
             }
 
         }

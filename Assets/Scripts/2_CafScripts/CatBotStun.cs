@@ -20,7 +20,7 @@ public class CatBotStun : MonoBehaviour
                 AudioManager.Instance.PlaySound("caf-death");
                 soundPlayed = true;
             }
-            onTriggered?.Invoke(new Vector3(.5f, .5f, .5f) ,.4f);
+            onTriggered?.Invoke(new Vector3(.5f, .5f, .5f) ,.5f);
             StartCoroutine(stunDelay());
         }
     }
