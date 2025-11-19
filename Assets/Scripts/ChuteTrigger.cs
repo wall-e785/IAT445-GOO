@@ -1,22 +1,26 @@
 using UnityEngine;
+using System.Collections;
 
 public class ChuteTrigger : MonoBehaviour
 {
     public Animator chuteAnimator;   // Assign ChuteDoor's Animator here
+    public GameObject sceneTrigger;
     private bool playerInZone = false;
     private bool hasOpened = false;
+    private bool sizeCheck = false;
+   
 
-    void Update()
-    {
+    //void Update()
+    //{
         
 
-            if (playerInZone && !hasOpened && Input.GetKeyDown(KeyCode.P))
-        {
-            chuteAnimator.SetTrigger("Open");
-            hasOpened = true;
-            Debug.Log("Chute opened!");
-        }
-    }
+    //    if (playerInZone && !hasOpened && Input.GetKeyDown(KeyCode.P))
+    //    {
+    //        chuteAnimator.SetTrigger("Open");
+    //        hasOpened = true;
+    //        Debug.Log("Chute opened!");
+    //    }
+    //}
 
     //void OnTriggerEnter(Collider other)
     //{
@@ -36,14 +40,27 @@ public class ChuteTrigger : MonoBehaviour
     //    }
     //}
 
+    public void bigEnough()
+    {
+        sizeCheck = true;
+    }
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.root.CompareTag("Player") && !hasOpened)
+        if (other.transform.root.CompareTag("Player") && !hasOpened && sizeCheck)
         {
             chuteAnimator.SetTrigger("Open");
             hasOpened = true;
             Debug.Log("Chute opened!");
+            AudioManager.Instance.PlaySound("NoBone");
+            StartCoroutine(activateSceneTrigger());
         }
+    }
+
+    IEnumerator activateSceneTrigger()
+    {
+        yield return new WaitForSeconds(4);
+        sceneTrigger.SetActive(true);
     }
 
 }
