@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 99.5364
+      value: 99.53639
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalScale.y
@@ -137,19 +137,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 99.5364
+      value: 99.53639
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.867
+      value: 0.8670005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.813
+      value: 0.8130001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.223
+      value: 0.22300008
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000017285347
+      value: 0.000001758337
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50035d9f985acb34d91455acc08d337b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4684,9 +4684,10 @@ GameObject:
   - component: {fileID: 674487807}
   - component: {fileID: 674487802}
   - component: {fileID: 674487808}
+  - component: {fileID: 674487809}
   m_Layer: 0
   m_Name: ruler
-  m_TagString: Untagged
+  m_TagString: LargePU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4974,6 +4975,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RulerCheck
   requiredFood: {fileID: 4476619845920338442}
+--- !u!114 &674487809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674487800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &719244696
 GameObject:
   m_ObjectHideFlags: 0
@@ -9659,7 +9672,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: AudioClips.Array.size
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: 'AudioClips.Array.data[0]'
@@ -9709,6 +9722,38 @@ PrefabInstance:
       propertyPath: 'AudioClips.Array.data[11]'
       value: 
       objectReference: {fileID: 8300000, guid: d5ac188bb8cfda647b5f170b079c0241, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[12]'
+      value: 
+      objectReference: {fileID: 8300000, guid: be1b8d8e3dd487a4199bec247cf29f98, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[13]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 220219c44bde0c14d898f113db06d4cd, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[14]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 71c82ec41bf2c9243a342cff8df071a4, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[15]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb15d6b5e783a4945a97143f53d596ab, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[16]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d49e3ca0d0716654d9cd6dbec917dc30, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[17]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b4613adc907ce8f4f9478777b633f300, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[18]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a09542bd569782241bc2731e219231f8, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[19]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ba5deb84c810d6748b726e8e89da5ebc, type: 3}
     - target: {fileID: 3990599680197882718, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.8778896
@@ -11852,6 +11897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Box
       objectReference: {fileID: 0}
+    - target: {fileID: 1068415621787007947, guid: 0a1fc265ea3dc6447ab6a941e42c3164, type: 3}
+      propertyPath: m_TagString
+      value: RegularPU
+      objectReference: {fileID: 0}
     - target: {fileID: 1723979551944635336, guid: 0a1fc265ea3dc6447ab6a941e42c3164, type: 3}
       propertyPath: m_AttachTransform
       value: 
@@ -11918,13 +11967,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2874135961594871614, guid: 0a1fc265ea3dc6447ab6a941e42c3164, type: 3}
       insertIndex: -1
       addedObject: {fileID: 569642152}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1068415621787007947, guid: 0a1fc265ea3dc6447ab6a941e42c3164, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1894866068}
   m_SourcePrefab: {fileID: 100100000, guid: 0a1fc265ea3dc6447ab6a941e42c3164, type: 3}
 --- !u!4 &1881786231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2659823769650972810, guid: 5fbbb350580e54a428cb4ddbc42369ff, type: 3}
   m_PrefabInstance: {fileID: 1652539632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1894866064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1068415621787007947, guid: 0a1fc265ea3dc6447ab6a941e42c3164, type: 3}
+  m_PrefabInstance: {fileID: 1834935052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1894866068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894866064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &1928705015
 GameObject:
   m_ObjectHideFlags: 0
@@ -14353,15 +14422,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.48
+      value: -31.14
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.53
+      value: 57.71
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 110.11
+      value: 111.77
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15811,9 +15880,10 @@ GameObject:
   - component: {fileID: 7660579018805934633}
   - component: {fileID: 3883892829440529958}
   - component: {fileID: 6845590290675560173}
+  - component: {fileID: 7660579018805934634}
   m_Layer: 0
   m_Name: Interactable Donut
-  m_TagString: Untagged
+  m_TagString: LargePU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17691,6 +17761,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7660579018805934634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476619845920338442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!33 &7675249492068127293
 MeshFilter:
   m_ObjectHideFlags: 0
