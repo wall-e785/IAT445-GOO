@@ -39,9 +39,10 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        instance.transition.SetBool("Start", true);
+        instance.transition.SetBool("StartTransition", true);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
-        instance.transition.SetBool("Start", false);
+        yield return new WaitForSeconds(2);
+        instance.transition.SetBool("StartTransition", false);
     }
 }
