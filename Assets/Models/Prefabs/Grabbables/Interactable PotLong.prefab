@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2585728445791046060}
   - component: {fileID: 4615084997344112960}
   - component: {fileID: 4895348498888234685}
+  - component: {fileID: 6633009722478495619}
   m_Layer: 0
   m_Name: Interactable PotLong
-  m_TagString: Grab
+  m_TagString: LargePU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +270,18 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &6633009722478495619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4436246227710713850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &5174600629714715219
 GameObject:
   m_ObjectHideFlags: 0

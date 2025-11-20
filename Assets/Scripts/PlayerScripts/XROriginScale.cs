@@ -12,7 +12,7 @@ public class XROriginScale : MonoBehaviour
     private bool grow = false;
     private bool shrink = false;
     private float minHeight = 0.5f;
-    private float maxHeight = 3f;
+    private float maxHeight = 4f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,7 +31,7 @@ public class XROriginScale : MonoBehaviour
                 GrowPlayer(.03f);
             }else if(currScene == "2_Level")
             {
-                GrowPlayer(.02f);
+                GrowPlayer(.015f);
             }else
             {
                 GrowPlayer(.05f);
@@ -90,7 +90,7 @@ public class XROriginScale : MonoBehaviour
 
         // Adjust Camera Offset height, moves the players view down as origin and the controls shrink. makes it appear smaller
         Transform cameraOffset = transform.Find("Camera Offset");
-        if (cameraOffset != null)
+        if (cameraOffset != null && cc.height < maxHeight)
         {
             Vector3 offsetPos = cameraOffset.localPosition;
             offsetPos.y += amnt;//multiply the verticle position of the camera by the shrink factor
@@ -123,7 +123,7 @@ public class XROriginScale : MonoBehaviour
 
         // Adjust Camera Offset height, moves the players view down as origin and the controls shrink. makes it appear smaller
         Transform cameraOffset = transform.Find("Camera Offset");
-        if (cameraOffset != null)
+        if (cameraOffset != null && cc.height > minHeight)
         {
             Vector3 offsetPos = cameraOffset.localPosition;
             offsetPos.y -= amnt;//multiply the verticle position of the camera by the shrink factor

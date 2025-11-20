@@ -116,10 +116,22 @@ public class MouthTrigger : MonoBehaviour
                     }
                     break;
                 case "2_Level": //checks for the caf level
-                    if(eatCount >= 18)
+                    switch (other.tag)
+                    {
+                        case "SmallFood":
+                            AudioManager.Instance.PlaySound("ChewSmall");
+                            break;
+                        case "MediumFood":
+                        case "LargeFood":
+                            AudioManager.Instance.PlaySound("ChewBig");
+                            break;
+                    }
+                    if (eatCount >= 18)
                     {
                         CafSizeCheck?.Invoke();
                         UIManager.Instance.setText("Escape through the garbage chute.");
+                        AudioManager.Instance.PlaySound("Good Job");
+                        AudioManager.Instance.PlaySound("BurpBig");
                     }
                     break;
                 case "3-4_Level":
