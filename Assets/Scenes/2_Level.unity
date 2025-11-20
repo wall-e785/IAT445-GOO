@@ -4441,7 +4441,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: AudioClips.Array.size
+<<<<<<< Updated upstream
       value: 8
+=======
+      value: 17
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: 'AudioClips.Array.data[0]'
@@ -4478,19 +4482,39 @@ PrefabInstance:
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: 'AudioClips.Array.data[8]'
       value: 
-      objectReference: {fileID: 8300000, guid: 2101964565093ad42a5b693403744b65, type: 3}
+      objectReference: {fileID: 8300000, guid: 3f0568c87890be14aab9c0da3ce90c88, type: 3}
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: 'AudioClips.Array.data[9]'
       value: 
-      objectReference: {fileID: 8300000, guid: 7188abefd56ae0c4a95cb767958e1a32, type: 3}
+      objectReference: {fileID: 8300000, guid: ba5deb84c810d6748b726e8e89da5ebc, type: 3}
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: 'AudioClips.Array.data[10]'
       value: 
-      objectReference: {fileID: 8300000, guid: 114e1d49cee09bf40bc8d7146d9aed8d, type: 3}
+      objectReference: {fileID: 8300000, guid: 71c82ec41bf2c9243a342cff8df071a4, type: 3}
     - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: 'AudioClips.Array.data[11]'
       value: 
-      objectReference: {fileID: 8300000, guid: d5ac188bb8cfda647b5f170b079c0241, type: 3}
+      objectReference: {fileID: 8300000, guid: da0301e9d2550de42813ee6d39de2095, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[12]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a09542bd569782241bc2731e219231f8, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[13]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 220219c44bde0c14d898f113db06d4cd, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[14]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 73e66cf7bb286434abb5a97664f02755, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[15]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3462b6d6d71ed03488d1930581e356a8, type: 3}
+    - target: {fileID: 2910686407167950878, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
+      propertyPath: 'AudioClips.Array.data[16]'
+      value: 
+      objectReference: {fileID: 8300000, guid: be1b8d8e3dd487a4199bec247cf29f98, type: 3}
     - target: {fileID: 3990599680197882718, guid: 7f7fe30a175aa8643b620adc928cfd00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.8778896
@@ -5198,6 +5222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_KitchenCabinet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4483397428621078262, guid: d5d787b8a2e39b24d8a9c7e01c2506a6, type: 3}
+      propertyPath: m_TagString
+      value: LargePU
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5208,6 +5236,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4483397428621078262, guid: d5d787b8a2e39b24d8a9c7e01c2506a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 401282163}
+    - targetCorrespondingSourceObject: {fileID: 4483397428621078262, guid: d5d787b8a2e39b24d8a9c7e01c2506a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 401282168}
   m_SourcePrefab: {fileID: 100100000, guid: d5d787b8a2e39b24d8a9c7e01c2506a6, type: 3}
 --- !u!1 &401282157 stripped
 GameObject:
@@ -5368,6 +5399,18 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &401282168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401282157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &415846418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9491,11 +9534,12 @@ Transform:
   m_GameObject: {fileID: 777896403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0084572, y: -0.02, z: 0}
+  m_LocalScale: {x: 1.0398, y: 1.0398, z: 1.0398}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2021138509}
+  - {fileID: 950598769}
   m_Father: {fileID: 1569758427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!59 &777896405
@@ -9514,8 +9558,8 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 30
-    damper: 30
+    spring: 15
+    damper: 15
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -9609,7 +9653,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 950598769}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -11739,6 +11783,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5135865593910628645, guid: 2e4bfe732d21f42979b57ff2d78eab7f, type: 3}
   m_PrefabInstance: {fileID: 950068586}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &950598768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950598769}
+  m_Layer: 0
+  m_Name: AttachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &950598769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950598768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.31, y: 0, z: -5.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 777896404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &953798735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12586,6 +12661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_KitchenTable_05
       objectReference: {fileID: 0}
+    - target: {fileID: 8475159986392234809, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
+      propertyPath: m_TagString
+      value: LargePU
+      objectReference: {fileID: 0}
     - target: {fileID: 9139494375681892739, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
       propertyPath: m_LocalScale.x
       value: 11.252024
@@ -12648,6 +12727,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8475159986392234809, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
       insertIndex: -1
       addedObject: {fileID: 995836129}
+    - targetCorrespondingSourceObject: {fileID: 8475159986392234809, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 995836134}
   m_SourcePrefab: {fileID: 100100000, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
 --- !u!1 &995836123 stripped
 GameObject:
@@ -12808,6 +12890,18 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &995836134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995836123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &996891172
 GameObject:
   m_ObjectHideFlags: 0
@@ -25299,8 +25393,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12.109142, y: 19.657719, z: 1.0183395}
-  m_Center: {x: -0.02047517, y: -0.74812436, z: -0.096322425}
+  m_Size: {x: 12.109146, y: 18.942526, z: 1.0183395}
+  m_Center: {x: -0.020475017, y: -0.672615, z: -0.09632242}
 --- !u!1001 &2042365237
 PrefabInstance:
   m_ObjectHideFlags: 0
