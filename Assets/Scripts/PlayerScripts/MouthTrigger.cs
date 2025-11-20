@@ -34,6 +34,7 @@ public class MouthTrigger : MonoBehaviour
     private int eatCount = 0;
     public UnityEvent<Vector3, float> onTriggered;
     public UnityEvent CafSizeCheck;
+    public UnityEvent SecuritySizeCheck;
 
 
 
@@ -119,6 +120,12 @@ public class MouthTrigger : MonoBehaviour
                     {
                         CafSizeCheck?.Invoke();
                         UIManager.Instance.setText("Escape through the garbage chute.");
+                    }
+                    break;
+                case "3-4_Level":
+                    if(eatCount >= 24)
+                    {
+                        SecuritySizeCheck?.Invoke();
                     }
                     break;
             }

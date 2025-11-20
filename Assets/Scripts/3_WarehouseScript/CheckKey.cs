@@ -14,9 +14,9 @@ public class CheckKey : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == tag && !activated)
+        if(other.gameObject.tag == tag && !activated)
         {
-            Debug.Log("door opening");
+            //Debug.Log("door opening");
             activated = true;
             doorController.SetBool("Opening", true);
             Destroy(other.gameObject);
