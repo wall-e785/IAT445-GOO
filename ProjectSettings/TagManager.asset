@@ -26,6 +26,8 @@ TagManager:
   - Rat
   - LargePU
   - RegularPU
+  - BlueKey
+  - PinkKey
   layers:
   - Default
   - TransparentFX

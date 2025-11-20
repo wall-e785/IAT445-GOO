@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: Interactable Edible Goo (2)
-  - Tag: SmallFood
+  - Name: BlueTrigger
+  - Tag: BlueKey
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
