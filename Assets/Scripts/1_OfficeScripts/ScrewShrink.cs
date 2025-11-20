@@ -22,6 +22,10 @@ public class ScrewShrink : MonoBehaviour
         }
         else
         {
+            int soundToPlay = (int)Random.Range(0f, 2f);
+            Debug.Log("Sound chosen: " + soundToPlay);
+            if (soundToPlay == 1) AudioManager.Instance.PlaySound("Screw1");
+            else AudioManager.Instance.PlaySound("Screw2");
             Destroy(this.gameObject);
         }
 

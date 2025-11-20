@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6430949657795674341}
   - component: {fileID: 4721235930710017863}
   - component: {fileID: 3873602866624426237}
+  - component: {fileID: 269732547116927674}
   m_Layer: 0
   m_Name: Interactable Apple
-  m_TagString: Untagged
+  m_TagString: SmallFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,6 +217,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &269732547116927674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670697929910053612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &2263698107627869300
 GameObject:
   m_ObjectHideFlags: 0

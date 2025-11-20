@@ -24,6 +24,8 @@ TagManager:
   - B4
   - B5
   - Rat
+  - LargePU
+  - RegularPU
   layers:
   - Default
   - TransparentFX

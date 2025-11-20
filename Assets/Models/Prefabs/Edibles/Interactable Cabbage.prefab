@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3061032555656398761}
   - component: {fileID: 2014608754702173987}
   - component: {fileID: 7830106302113566977}
+  - component: {fileID: 2164775589328935567}
   m_Layer: 0
   m_Name: Interactable Cabbage
-  m_TagString: Untagged
+  m_TagString: MediumFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,6 +217,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &2164775589328935567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4409918640330064283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &6651342008265180325
 GameObject:
   m_ObjectHideFlags: 0

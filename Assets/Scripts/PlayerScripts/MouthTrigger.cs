@@ -106,10 +106,12 @@ public class MouthTrigger : MonoBehaviour
                     }
                     break;
                 case "1_Level": //checks for the office level
+                    AudioManager.Instance.PlaySound("ChewBig");
                     if (eatCount >= 1)
                     {
                         AudioManager.Instance.PlaySound("office-3");
                         UIManager.Instance.setText("Create a path to the vent.");
+                        AudioManager.Instance.PlaySound("Good Job");
                     }
                     break;
                 case "2_Level": //checks for the caf level

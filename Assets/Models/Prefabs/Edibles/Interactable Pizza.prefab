@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8560357749481602698}
   - component: {fileID: 2982794658903315077}
   - component: {fileID: 4864789311384742478}
+  - component: {fileID: 4130130639369054913}
   m_Layer: 0
   m_Name: Interactable Pizza
-  m_TagString: Untagged
+  m_TagString: LargeFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +219,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &4130130639369054913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495977204524758697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &4083563397169236215
 GameObject:
   m_ObjectHideFlags: 0

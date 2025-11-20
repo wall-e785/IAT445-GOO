@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6368292636518343901}
   - component: {fileID: 8710420342932007935}
   - component: {fileID: 3256707809319841928}
+  - component: {fileID: 1380345112387156106}
   m_Layer: 0
   m_Name: InteractableFries
-  m_TagString: Untagged
+  m_TagString: SmallFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,6 +216,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &1380345112387156106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084148306359465911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &6688097315567749726
 GameObject:
   m_ObjectHideFlags: 0

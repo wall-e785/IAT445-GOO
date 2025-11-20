@@ -19,7 +19,9 @@ public class GrateUnlock : MonoBehaviour
             {
                 rb.constraints = RigidbodyConstraints.None;
             }
-
+            
+            AudioManager.Instance.PlaySound("Vent");
+            AudioManager.Instance.PlaySound("office-8");
             sceneTrigger.SetActive(true);
             unlocked = true;
         }
