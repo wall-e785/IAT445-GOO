@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: garage_platform
-  - Tag: Untagged
-  - Layer: 6
+  - Name: XR Origin (XR Rig)
+  - Tag: Player
+  - Layer: Ignore Raycast
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

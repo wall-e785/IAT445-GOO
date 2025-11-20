@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3111275675216864929}
   - component: {fileID: 4013984260722629405}
   - component: {fileID: 5353084953099838945}
+  - component: {fileID: 8147241598319152428}
   m_Layer: 0
   m_Name: Interactable Knife2
-  m_TagString: Grab
+  m_TagString: RegularPU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +270,18 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &8147241598319152428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3772156167681672877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &4174007939831612232
 GameObject:
   m_ObjectHideFlags: 0

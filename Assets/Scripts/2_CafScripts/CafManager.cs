@@ -7,6 +7,7 @@ public class CafManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        AudioManager.Instance.PlaySound("Drop");
         AudioManager.Instance.PlaySound("caf-1");
         UIManager.Instance.setText("Eat and grow. Avoid the CatBot.");
         StartCoroutine(playDelay("caf-2", 1.2f));

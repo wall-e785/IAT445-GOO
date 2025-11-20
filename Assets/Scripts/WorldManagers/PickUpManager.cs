@@ -13,7 +13,7 @@ public class PickUpManager : MonoBehaviour
     {
         grab = GetComponent<XRGrabInteractable>();
         grab.selectEntered.AddListener(OnPickedUp);
-        Debug.Log(grab);
+        //Debug.Log(grab);
     }
 
     void Start()
@@ -37,8 +37,17 @@ public class PickUpManager : MonoBehaviour
                 clipName = "PUMedium";
                 break;
             case "LargeFood":
-            case "LargePU":
                 clipName = "PULarge";
+                break;
+            case "LargePU":
+                if(SceneManager.GetActiveScene().buildIndex == 3)
+                {
+                    clipName = "PULargest";
+                }
+                else
+                {
+                    clipName = "PULarge";
+                }
                 break;
         }
 
