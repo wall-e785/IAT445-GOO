@@ -96,8 +96,15 @@ public class MouthTrigger : MonoBehaviour
 
             Debug.Log("EatCount: " + eatCount);
 
-            //switch to check for eatCount for each scene's specific puzzle.
+            //switch to check for eatCount for each scene's specific puzzle, as well as playing sound effects.
             switch(SceneManager.GetActiveScene().name){
+                case "0.5_Level":
+                    AudioManager.Instance.PlaySound("ChewSmall");
+                    if(eatCount >=3)
+                    {
+                        AudioManager.Instance.PlaySound("Good Job");
+                    }
+                    break;
                 case "1_Level": //checks for the office level
                     if (eatCount >= 1)
                     {

@@ -45,6 +45,7 @@ public class PetriManager : MonoBehaviour
     IEnumerator playDelay(string clipName, float delay)
     {
         yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlaySound("BurpSmall");
         AudioManager.Instance.PlaySound(clipName);
         yield return new WaitForSeconds(5);
         LevelLoader.instance.LoadNextLevel();
