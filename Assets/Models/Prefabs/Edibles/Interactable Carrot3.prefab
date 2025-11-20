@@ -65,9 +65,10 @@ GameObject:
   - component: {fileID: 8588037474109910282}
   - component: {fileID: 2854555909447328765}
   - component: {fileID: 4576317877282081307}
+  - component: {fileID: 8651343117175798540}
   m_Layer: 0
   m_Name: Interactable Carrot3
-  m_TagString: Untagged
+  m_TagString: SmallFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +270,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &8651343117175798540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552817770364503637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &3499928488504304711
 PrefabInstance:
   m_ObjectHideFlags: 0

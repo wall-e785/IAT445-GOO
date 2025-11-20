@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Edible Goo
       objectReference: {fileID: 0}
+    - target: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
+      propertyPath: m_TagString
+      value: SmallFood
+      objectReference: {fileID: 0}
     - target: {fileID: 4684605696742785943, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.94
@@ -194,7 +198,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2123097361}
   m_SourcePrefab: {fileID: 100100000, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
 --- !u!1001 &297054313
 PrefabInstance:
@@ -356,6 +363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Edible Goo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
+      propertyPath: m_TagString
+      value: SmallFood
+      objectReference: {fileID: 0}
     - target: {fileID: 4684605696742785943, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.17
@@ -423,7 +434,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866565254}
   m_SourcePrefab: {fileID: 100100000, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
 --- !u!64 &919401453
 MeshCollider:
@@ -458,6 +472,10 @@ PrefabInstance:
     - target: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
       propertyPath: m_Name
       value: Interactable Edible Goo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
+      propertyPath: m_TagString
+      value: SmallFood
       objectReference: {fileID: 0}
     - target: {fileID: 4684605696742785943, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -522,7 +540,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1716697546}
   m_SourcePrefab: {fileID: 100100000, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
 --- !u!1 &1110625021
 GameObject:
@@ -1145,6 +1166,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
   m_PrefabInstance: {fileID: 1104685350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1716697546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716697545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &1802080060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1268,6 +1301,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
   m_PrefabInstance: {fileID: 768990111}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866565254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866565253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &1971448753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1343,6 +1388,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3678038179618982882, guid: ba6e5a7f000864e4282dc054403f174a, type: 3}
   m_PrefabInstance: {fileID: 256100632}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2123097361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123097360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &2133137881
 GameObject:
   m_ObjectHideFlags: 0

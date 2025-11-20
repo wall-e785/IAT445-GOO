@@ -65,9 +65,10 @@ GameObject:
   - component: {fileID: 1618108354963147859}
   - component: {fileID: 8991101784464881381}
   - component: {fileID: 1245409351902190171}
+  - component: {fileID: 4825816432378665743}
   m_Layer: 0
   m_Name: Interactable Core
-  m_TagString: Untagged
+  m_TagString: SmallFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +270,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &4825816432378665743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142399886888141526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &5065205189083303614
 PrefabInstance:
   m_ObjectHideFlags: 0
