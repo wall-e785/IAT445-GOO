@@ -14,6 +14,14 @@ public class XROriginScale : MonoBehaviour
     private float minHeight = 0.5f;
     private float maxHeight = 4f;
 
+    //used to spawn droplets when shrunk
+    public GameObject gooDropletPrefab;
+    public Transform pos1;
+    public Transform pos2;
+    public Transform pos3;
+    public Transform pos4;
+    public Transform pos5;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,6 +65,11 @@ public class XROriginScale : MonoBehaviour
     {
         shrink = true;
         StartCoroutine(StopShrink(delay));
+
+        Instantiate(gooDropletPrefab, pos1.localPosition, Quaternion.identity);
+        Instantiate(gooDropletPrefab, pos2.localPosition, Quaternion.identity);
+        Instantiate(gooDropletPrefab, pos3.localPosition, Quaternion.identity);
+
     }
 
     IEnumerator StopGrow(float delay)
