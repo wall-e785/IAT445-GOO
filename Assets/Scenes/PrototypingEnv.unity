@@ -7984,7 +7984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.25
+      value: 4.65
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7992,7 +7992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.79
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 6864535492956239172, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10381,6 +10381,12 @@ MonoBehaviour:
   translateYAxis: {fileID: 4091624078112751379, guid: 7f59cc19636f04d5cbbc64e77a20787f, type: 3}
   xrOrigin: {fileID: 818686355509295526}
   onTriggered:
+    m_PersistentCalls:
+      m_Calls: []
+  CafSizeCheck:
+    m_PersistentCalls:
+      m_Calls: []
+  SecuritySizeCheck:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &7548112288561114010

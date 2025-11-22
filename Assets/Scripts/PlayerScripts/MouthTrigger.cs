@@ -135,7 +135,17 @@ public class MouthTrigger : MonoBehaviour
                     }
                     break;
                 case "3-4_Level":
-                    if(eatCount >= 24)
+                    switch (other.tag)
+                    {
+                        case "SmallFood":
+                            AudioManager.Instance.PlaySound("ChewSmall");
+                            break;
+                        case "MediumFood":
+                        case "LargeFood":
+                            AudioManager.Instance.PlaySound("ChewBig");
+                            break;
+                    }
+                    if (eatCount >= 24)
                     {
                         SecuritySizeCheck?.Invoke();
                         AudioManager.Instance.PlaySound("Good Job");
