@@ -36,11 +36,13 @@ public class MouthTrigger : MonoBehaviour
     public UnityEvent CafSizeCheck;
     public UnityEvent SecuritySizeCheck;
 
+    //visuals
+    private ParticleSystem particles;
 
 
     void Start()
     {
-
+        particles = GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -93,6 +95,11 @@ public class MouthTrigger : MonoBehaviour
                     eatCount += 3;
                     AudioManager.Instance.PlaySound("EW");
                     break;
+            }
+
+            if (particles)
+            {
+                particles.Play();
             }
 
             Debug.Log("EatCount: " + eatCount);

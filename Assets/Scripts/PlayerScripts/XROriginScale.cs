@@ -66,9 +66,11 @@ public class XROriginScale : MonoBehaviour
         shrink = true;
         StartCoroutine(StopShrink(delay));
 
-        Instantiate(gooDropletPrefab, pos1.localPosition, Quaternion.identity);
-        Instantiate(gooDropletPrefab, pos2.localPosition, Quaternion.identity);
-        Instantiate(gooDropletPrefab, pos3.localPosition, Quaternion.identity);
+        Instantiate(gooDropletPrefab, pos1.position, pos1.rotation);
+        Instantiate(gooDropletPrefab, pos2.position, pos2.rotation);
+        Instantiate(gooDropletPrefab, pos3.position, pos3.rotation);
+
+        Debug.Log("pos 1:" + pos1.position);
 
     }
 
