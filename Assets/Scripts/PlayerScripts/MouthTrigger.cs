@@ -144,7 +144,7 @@ public class MouthTrigger : MonoBehaviour
                     break;
             }
 
-            if (!other.CompareTag("Rat"))
+            if (!other.CompareTag("Rat") && !(SceneManager.GetActiveScene().buildIndex == 5))
             {
                 Destroy(other.transform.parent.gameObject);
             }
