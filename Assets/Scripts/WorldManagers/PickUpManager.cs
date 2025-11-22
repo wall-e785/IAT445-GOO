@@ -23,7 +23,10 @@ public class PickUpManager : MonoBehaviour
         switch (tag)
         {
             case "SmallFood":
-                if(SceneManager.GetActiveScene().buildIndex == 1)
+            case "WarehouseKey":
+            case "BlueKey":
+            case "PinkKey":
+                if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
                     clipName = "PUSmallest";
                 }
@@ -37,10 +40,12 @@ public class PickUpManager : MonoBehaviour
                 clipName = "PUMedium";
                 break;
             case "LargeFood":
+            case "B1":
+            case "B2":
                 clipName = "PULarge";
                 break;
             case "LargePU":
-                if(SceneManager.GetActiveScene().buildIndex == 3)
+                if (SceneManager.GetActiveScene().buildIndex == 3)
                 {
                     clipName = "PULargest";
                 }
@@ -48,6 +53,11 @@ public class PickUpManager : MonoBehaviour
                 {
                     clipName = "PULarge";
                 }
+                break;
+            case "B3":
+            case "B4":
+            case "B5":
+                clipName = "PULargest";
                 break;
         }
 

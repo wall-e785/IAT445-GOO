@@ -31802,6 +31802,7 @@ GameObject:
   - component: {fileID: 398667605}
   - component: {fileID: 398667604}
   - component: {fileID: 398667603}
+  - component: {fileID: 398667609}
   m_Layer: 0
   m_Name: Cube_COL (1)
   m_TagString: B2
@@ -32074,6 +32075,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398667601}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &398667609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398667601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &399009333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67018,6 +67031,7 @@ GameObject:
   - component: {fileID: 837726266}
   - component: {fileID: 837726268}
   - component: {fileID: 837726267}
+  - component: {fileID: 837726273}
   m_Layer: 0
   m_Name: Cube_COL (3)
   m_TagString: B4
@@ -67290,6 +67304,18 @@ Transform:
   - {fileID: 61274064}
   m_Father: {fileID: 1705189969}
   m_LocalEulerAnglesHint: {x: 0, y: -38.806, z: 0}
+--- !u!114 &837726273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837726265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &839651616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2184214910090255162, guid: 726c275789ca46c41acbc55c4fa5ed61, type: 3}
@@ -134518,6 +134544,7 @@ GameObject:
   - component: {fileID: 1430133336}
   - component: {fileID: 1430133335}
   - component: {fileID: 1430133334}
+  - component: {fileID: 1430133341}
   m_Layer: 0
   m_Name: Cube_COL (1)
   m_TagString: B2
@@ -134790,6 +134817,18 @@ Transform:
   - {fileID: 65269724}
   m_Father: {fileID: 1705189969}
   m_LocalEulerAnglesHint: {x: 0, y: 25.4, z: 0}
+--- !u!114 &1430133341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430133333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &1430709706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bf6336849ef8604b83191912591e08a, type: 3}
@@ -136156,6 +136195,7 @@ GameObject:
   - component: {fileID: 1456178497}
   - component: {fileID: 1456178496}
   - component: {fileID: 1456178495}
+  - component: {fileID: 1456178501}
   m_Layer: 0
   m_Name: Cube_COL
   m_TagString: B1
@@ -136428,6 +136468,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456178493}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1456178501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456178493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!64 &1459324201
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -151376,6 +151428,7 @@ GameObject:
   - component: {fileID: 1651612931}
   - component: {fileID: 1651612930}
   - component: {fileID: 1651612929}
+  - component: {fileID: 1651612935}
   m_Layer: 0
   m_Name: Cube_COL (2)
   m_TagString: B3
@@ -151648,6 +151701,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651612927}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1651612935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651612927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &1656603974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 73a2925b2422bd145a19e74a6db3e190, type: 3}
@@ -153229,6 +153294,7 @@ GameObject:
   - component: {fileID: 1683140190}
   - component: {fileID: 1683140192}
   - component: {fileID: 1683140191}
+  - component: {fileID: 1683140197}
   m_Layer: 0
   m_Name: Cube_COL (2)
   m_TagString: B3
@@ -153501,6 +153567,18 @@ Transform:
   - {fileID: 1854748123}
   m_Father: {fileID: 1705189969}
   m_LocalEulerAnglesHint: {x: 0, y: -118.844, z: 0}
+--- !u!114 &1683140197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683140189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1001 &1684689149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164415,6 +164493,7 @@ GameObject:
   - component: {fileID: 1765608949}
   - component: {fileID: 1765608948}
   - component: {fileID: 1765608947}
+  - component: {fileID: 1765608953}
   m_Layer: 0
   m_Name: Cube_COL (1)
   m_TagString: B2
@@ -164687,6 +164766,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765608945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1765608953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765608945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!64 &1765832538
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -172204,6 +172295,7 @@ GameObject:
   - component: {fileID: 1883918061}
   - component: {fileID: 1883918063}
   - component: {fileID: 1883918062}
+  - component: {fileID: 1883918068}
   m_Layer: 0
   m_Name: Cube_COL
   m_TagString: B1
@@ -172476,6 +172568,18 @@ Transform:
   - {fileID: 1400904370}
   m_Father: {fileID: 1705189969}
   m_LocalEulerAnglesHint: {x: 0, y: -106.448, z: 0}
+--- !u!114 &1883918068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883918060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &1884235670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2550463727306718371, guid: d6cbb3af3b624ed49afc34409faec202, type: 3}
@@ -183558,6 +183662,7 @@ GameObject:
   - component: {fileID: 1949535717}
   - component: {fileID: 1949535716}
   - component: {fileID: 1949535715}
+  - component: {fileID: 1949535721}
   m_Layer: 0
   m_Name: Cube_COL
   m_TagString: B1
@@ -183830,6 +183935,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949535713}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1949535721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949535713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &1950158320
 GameObject:
   m_ObjectHideFlags: 0
@@ -199386,6 +199503,7 @@ GameObject:
   - component: {fileID: 2113115740}
   - component: {fileID: 2113115739}
   - component: {fileID: 2113115738}
+  - component: {fileID: 2113115744}
   m_Layer: 0
   m_Name: Cube_COL (3)
   m_TagString: B4
@@ -199658,6 +199776,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113115736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2113115744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113115736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!64 &2114050619
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -209764,6 +209894,7 @@ GameObject:
   - component: {fileID: 6680869331583437556}
   - component: {fileID: 7820793477922769205}
   - component: {fileID: 249608027785166155}
+  - component: {fileID: 8282190773012558827}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -244660,6 +244791,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1428899196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8282190773012558827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796148176917198299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af0b7f596773a4b9dc67661bba99f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
 --- !u!1 &8295183163578563665
 GameObject:
   m_ObjectHideFlags: 0
