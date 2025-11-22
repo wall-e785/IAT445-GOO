@@ -138,12 +138,11 @@ public class MouthTrigger : MonoBehaviour
                     if(eatCount >= 24)
                     {
                         SecuritySizeCheck?.Invoke();
+                        AudioManager.Instance.PlaySound("Good Job");
+                        AudioManager.Instance.PlaySound("BurpBig");
                     }
                     break;
             }
-
-
-
 
             if (!other.CompareTag("Rat"))
             {
