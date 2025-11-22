@@ -143,10 +143,6 @@ public class MouthTrigger : MonoBehaviour
                     }
                     break;
             }
-        }
-
-
-
 
             if (!other.CompareTag("Rat"))
             {
