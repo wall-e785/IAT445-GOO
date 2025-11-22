@@ -19,7 +19,17 @@ public class CheckKey : MonoBehaviour
             //Debug.Log("door opening");
             activated = true;
             doorController.SetBool("Opening", true);
+            AudioManager.Instance.PlaySound("ScanCard");
             Destroy(other.gameObject);
+
+            if(tag == "WarehouseKey")
+            {
+                AudioManager.Instance.PlaySound("Warehouse Door Open");
+            }
+            else if(tag == "BlueKey")
+            {
+                AudioManager.Instance.PlaySound("Security Room Door Open");
+            }
         }
     }
 }

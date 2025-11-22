@@ -17,9 +17,14 @@ public class SizeCheckDoor : MonoBehaviour
         if (bigEnough && !activated)
         {
             //Debug.Log("door opening");
+            AudioManager.Instance.PlaySound("Security Room Door Open");
             activated = true;
             doorControllerOne.SetBool("Opening", true);
             doorControllerTwo.SetBool("Opening", true);
+        }
+        else if(!bigEnough && !activated)
+        {
+            AudioManager.Instance.PlaySound("Not Tall");
         }
     }
 }
