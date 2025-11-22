@@ -141,9 +141,9 @@ public class MouthTrigger : MonoBehaviour
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
                     }
-            }
                     break;
             }
+        }
 
 
 
