@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: AudioManager
-  - Tag: Untagged
+  - Name: Interactable PizzaSlice (4)
+  - Tag: MediumFood
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

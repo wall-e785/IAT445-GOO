@@ -195,6 +195,18 @@ public class MouthTrigger : MonoBehaviour
 
     }
 
+    public int getEatCount()
+    {
+        return eatCount;
+    }
+
+    public void subtractEatCount(int count)
+    {
+        eatCount = eatCount - count;
+        if (eatCount < 0) eatCount = 0;
+        Debug.Log("Eat Count Subtracted to: " + eatCount);
+    }
+
     IEnumerator LiftPlayer(Vector3 targetPosition, float duration)
     {
         Vector3 initialPosition = xrOrigin.position;
