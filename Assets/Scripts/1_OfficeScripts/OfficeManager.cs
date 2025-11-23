@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class OfficeManager : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class OfficeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        AudioManager.Instance.PlaySound("office-2.1");
+        StartCoroutine(playDelay("office-2.2", 8.5f));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator playDelay(string clipName, float delay)
     {
-
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlaySound(clipName);
     }
 }
