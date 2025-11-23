@@ -36,11 +36,13 @@ public class MouthTrigger : MonoBehaviour
     public UnityEvent CafSizeCheck;
     public UnityEvent SecuritySizeCheck;
 
+    //visuals
+    private ParticleSystem particles;
 
 
     void Start()
     {
-
+        particles = GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -95,6 +97,11 @@ public class MouthTrigger : MonoBehaviour
                     break;
             }
 
+            if (particles)
+            {
+                particles.Play();
+            }
+
             Debug.Log("EatCount: " + eatCount);
 
             //switch to check for eatCount for each scene's specific puzzle, as well as playing sound effects.
@@ -135,7 +142,17 @@ public class MouthTrigger : MonoBehaviour
                     }
                     break;
                 case "3-4_Level":
-                    if(eatCount >= 24)
+                    switch (other.tag)
+                    {
+                        case "SmallFood":
+                            AudioManager.Instance.PlaySound("ChewSmall");
+                            break;
+                        case "MediumFood":
+                        case "LargeFood":
+                            AudioManager.Instance.PlaySound("ChewBig");
+                            break;
+                    }
+                    if (eatCount >= 24)
                     {
                         SecuritySizeCheck?.Invoke();
                         AudioManager.Instance.PlaySound("Good Job");

@@ -27,6 +27,8 @@ public class CatBotStun : MonoBehaviour
                 stunned = true;
                 AudioManager.Instance.PlaySound("Negative");
                 locomotion.SetActive(false);
+
+
                 onTriggered?.Invoke(new Vector3(.5f, .5f, .5f), .5f);
                 StartCoroutine(stunDelay());
             }
