@@ -34,7 +34,7 @@ public class MouthTrigger : MonoBehaviour
     private int eatCount = 0;
     public UnityEvent<Vector3, float> onTriggered;
     public UnityEvent CafSizeCheck;
-    public UnityEvent SecuritySizeCheck;
+    public UnityEvent<bool> SecuritySizeCheck;
     private bool cafSoundPlayed = false;
 
     //visuals
@@ -160,9 +160,13 @@ public class MouthTrigger : MonoBehaviour
                     }
                     if (eatCount >= 24)
                     {
-                        SecuritySizeCheck?.Invoke();
+                        SecuritySizeCheck?.Invoke(true);
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
+                    }
+                    else
+                    {
+                        SecuritySizeCheck?.Invoke(false);
                     }
                     break;
             }
