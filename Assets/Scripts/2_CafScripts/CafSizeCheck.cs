@@ -31,6 +31,8 @@ public class CafSizeCheck : MonoBehaviour
 
             rb1.constraints = RigidbodyConstraints.None;
             rb2.constraints = RigidbodyConstraints.None;
+            AudioManager.Instance.PlaySound("caf-3");
+
         }
     }
 
@@ -47,7 +49,8 @@ public class CafSizeCheck : MonoBehaviour
             if (!displaying)
             {
                 displaying = true;
-                StartCoroutine(Display("Goo... Need MORE Food..."));
+                AudioManager.Instance.PlaySound("Negative");
+                StartCoroutine(Display("Goo still hungry... Goo need MORE food..."));
             }
 
         }

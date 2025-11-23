@@ -25,6 +25,7 @@ public class CatBotStun : MonoBehaviour
             if (!stunned)
             {
                 stunned = true;
+                AudioManager.Instance.PlaySound("Drop");
                 AudioManager.Instance.PlaySound("Negative");
                 locomotion.SetActive(false);
 
