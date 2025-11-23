@@ -67,11 +67,12 @@ public class MouthTrigger : MonoBehaviour
         Vector3 scaleIncrement = Vector3.zero;
         float delayIncrement = 0;
 
-        if(other.CompareTag("SmallFood") || other.CompareTag("MediumFood") || other.CompareTag("LargeFood") || other.CompareTag("Rat"))
+        if(other.CompareTag("SmallFood") || other.CompareTag("MediumFood") || other.CompareTag("LargeFood") || other.CompareTag("Rat") || other.CompareTag("GooDrop"))
         {
             switch (other.tag)
             {
                 case "SmallFood":
+                case "GooDrop":
                     liftAmount = smallLift;
                     scaleIncrement = smallFoodScale;
                     delayIncrement = .2f;
@@ -166,15 +167,23 @@ public class MouthTrigger : MonoBehaviour
                     break;
             }
 
-            if (!other.CompareTag("Rat"))
+            if (other.CompareTag("Rat"))
             {
+                Destroy(other.gameObject);
+            }
+            else if(other.CompareTag("GooDrop"))
+            {
+                int soundToPlay = (int)UnityEngine.Random.Range(1, 8);
+                string soundName = "Absorb" + soundToPlay;
+                AudioManager.Instance.PlaySound(soundName);
                 Destroy(other.transform.parent.gameObject);
             }
             else
             {
-                Destroy(other.gameObject);
+                Destroy(other.transform.parent.gameObject);
             }
             onTriggered?.Invoke(scaleIncrement, delayIncrement);
+
 
             // Animate lift and scale
             //Vector3 targetPosition = xrOrigin.position + new Vector3(0, liftAmount, 0);
