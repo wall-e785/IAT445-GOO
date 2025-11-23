@@ -35,6 +35,7 @@ public class MouthTrigger : MonoBehaviour
     public UnityEvent<Vector3, float> onTriggered;
     public UnityEvent CafSizeCheck;
     public UnityEvent SecuritySizeCheck;
+    private bool cafSoundPlayed = false;
 
     //visuals
     private ParticleSystem particles;
@@ -139,6 +140,10 @@ public class MouthTrigger : MonoBehaviour
                         UIManager.Instance.setText("Escape through the garbage chute.");
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
+                    }else if (eatCount >= 9 && !cafSoundPlayed)
+                    {
+                        AudioManager.Instance.PlaySound("caf-2");
+                        cafSoundPlayed = true;
                     }
                     break;
                 case "3-4_Level":
