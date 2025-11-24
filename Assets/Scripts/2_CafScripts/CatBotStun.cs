@@ -19,18 +19,14 @@ public class CatBotStun : MonoBehaviour
             if (!soundPlayed)
             {
                 AudioManager.Instance.PlaySound("caf-death");
-                UIManager.Instance.setThought("OUCH! Need to reabsorb...");
                 soundPlayed = true;
             }
 
             if (!stunned)
             {
                 stunned = true;
-                AudioManager.Instance.PlaySound("Drop");
                 AudioManager.Instance.PlaySound("Negative");
                 locomotion.SetActive(false);
-
-
                 onTriggered?.Invoke(new Vector3(.5f, .5f, .5f), .5f);
                 StartCoroutine(stunDelay());
             }
