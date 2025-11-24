@@ -33,7 +33,7 @@ public class MouthTrigger : MonoBehaviour
     // Other Triggers
     private int eatCount = 0;
     public UnityEvent<Vector3, float> onTriggered;
-    public UnityEvent CafSizeCheck;
+    public UnityEvent<bool> CafSizeCheck;
     public UnityEvent<bool> SecuritySizeCheck;
     private bool cafSoundPlayed = false;
 
@@ -137,7 +137,7 @@ public class MouthTrigger : MonoBehaviour
                     }
                     if (eatCount >= 18)
                     {
-                        CafSizeCheck?.Invoke();
+                        CafSizeCheck?.Invoke(true);
                         UIManager.Instance.setText("Escape through the garbage chute.");
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
@@ -145,6 +145,10 @@ public class MouthTrigger : MonoBehaviour
                     {
                         AudioManager.Instance.PlaySound("caf-2");
                         cafSoundPlayed = true;
+                    }
+                    else
+                    {
+                        CafSizeCheck?.Invoke(false);
                     }
                     break;
                 case "3-4_Level":
