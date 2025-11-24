@@ -307,6 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::XROriginScale
   xrOriginTransform: {fileID: 6864535492956239172}
   camera: {fileID: 3576701622501323134}
+  mouth: {fileID: 2648335505965700605}
   gooDropletPrefab: {fileID: 6143697461963551111, guid: 21892516db77803409d4256007c18e99, type: 3}
   pos1: {fileID: 1930325127999600837}
   pos2: {fileID: 722986672761703267}

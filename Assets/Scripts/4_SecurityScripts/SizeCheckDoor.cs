@@ -7,9 +7,9 @@ public class SizeCheckDoor : MonoBehaviour
     private bool activated = false;
     private bool bigEnough = false;
 
-    public void isBig()
+    public void isBig(bool val)
     {
-        bigEnough = true;
+        bigEnough = val;
     }
 
     private void OnTriggerEnter(Collider other)
