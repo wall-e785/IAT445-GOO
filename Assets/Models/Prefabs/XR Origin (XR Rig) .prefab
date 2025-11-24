@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_Mediator: {fileID: 7962968812155573832}
   m_TransformationPriority: 0
   m_DisableGravityDuringJump: 0
-  m_UnlimitedInAirJumps: 1
+  m_UnlimitedInAirJumps: 0
   m_InAirJumpCount: 1
   m_JumpForgivenessWindow: 0.25
   m_JumpHeight: 12
