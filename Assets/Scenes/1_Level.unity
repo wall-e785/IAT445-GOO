@@ -8532,7 +8532,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
       propertyPath: text
-      value: Find a way to remove the screws.
+      value: "Use the \u2018?\u2019 button to activate goo power ray. The ray can
+        shrink/grow some objects."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
+      propertyPath: thought
+      value: Goo is strong...
       objectReference: {fileID: 0}
     - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
       propertyPath: m_Enabled
@@ -14653,8 +14658,198 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1466434408227029774, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2019667629849600675}
+    - targetCorrespondingSourceObject: {fileID: 9029405206743653814, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2019667629849600674}
   m_SourcePrefab: {fileID: 100100000, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+--- !u!1 &2019667629849600672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9029405206743653814, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+  m_PrefabInstance: {fileID: 2019667629849600671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2019667629849600673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1466434408227029774, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+  m_PrefabInstance: {fileID: 2019667629849600671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019667629849600674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019667629849600672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7370fc53aa099f44ba3c6a735b81065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PumpRay
+  onTriggeredS1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4951624}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredS2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1346956052}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredS3:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795821945}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredS4:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1039002371}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredB1:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB2:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB3:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB4:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB5:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2019667629849600675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019667629849600673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7370fc53aa099f44ba3c6a735b81065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PumpRay
+  onTriggeredS1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4951624}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredS2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1346956052}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredS3:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795821945}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredS4:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1039002371}
+        m_TargetAssemblyTypeName: ScrewShrink, Assembly-CSharp
+        m_MethodName: StartShrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggeredB1:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB2:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB3:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB4:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggeredB5:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &2115743938769494373
 MeshCollider:
   m_ObjectHideFlags: 0

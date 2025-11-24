@@ -33,7 +33,7 @@ public class RulerCheck : MonoBehaviour
             
             if (!displaying) {
                 displaying = true;
-                StartCoroutine(Display("Goo... Need Food..."));
+                StartCoroutine(Display("Goo... need food..."));
                 AudioManager.Instance.PlaySound("Negative");
             }
 

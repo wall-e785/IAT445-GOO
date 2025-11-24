@@ -6,7 +6,7 @@ public class OfficeManager : MonoBehaviour
 
     private void Awake()
     {
-        UIManager.Instance.setText("Escape the desk.");
+        UIManager.Instance.setText("Find a way to escape through the vent. Use ‘?’ button to jump.");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -13,7 +13,7 @@ public class PetriManager : MonoBehaviour
     private void Awake()
     {
         AudioManager.Instance.PlaySound("office-1");
-        UIManager.Instance.setText("Eat and grow. Grab food and drag it towards yourself to eat.");
+        UIManager.Instance.setText("Use the side triggers to grab food, and the joysticks to pull food towards yourself to eat.");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

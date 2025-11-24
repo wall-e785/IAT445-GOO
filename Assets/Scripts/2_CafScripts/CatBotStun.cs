@@ -19,6 +19,7 @@ public class CatBotStun : MonoBehaviour
             if (!soundPlayed)
             {
                 AudioManager.Instance.PlaySound("caf-death");
+                UIManager.Instance.setThought("OUCH! Need to reabsorb...");
                 soundPlayed = true;
             }
 
