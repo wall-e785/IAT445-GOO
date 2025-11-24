@@ -113,6 +113,7 @@ public class MouthTrigger : MonoBehaviour
                     if(eatCount >=3)
                     {
                         AudioManager.Instance.PlaySound("Good Job");
+                        UIManager.Instance.setThought("...Bye Friends...");
                     }
                     break;
                 case "1_Level": //checks for the office level
