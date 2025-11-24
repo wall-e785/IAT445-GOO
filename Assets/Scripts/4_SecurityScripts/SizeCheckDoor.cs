@@ -7,9 +7,9 @@ public class SizeCheckDoor : MonoBehaviour
     private bool activated = false;
     private bool bigEnough = false;
 
-    public void isBig()
+    public void isBig(bool val)
     {
-        bigEnough = true;
+        bigEnough = val;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,10 +21,13 @@ public class SizeCheckDoor : MonoBehaviour
             activated = true;
             doorControllerOne.SetBool("Opening", true);
             doorControllerTwo.SetBool("Opening", true);
+            UIManager.Instance.setText("Find the Blue Keycard to open the door.");
+            UIManager.Instance.setThought("Need... Card...");
         }
         else if(!bigEnough && !activated)
         {
             AudioManager.Instance.PlaySound("Not Tall");
+            UIManager.Instance.setThought("Goo + Food = Tall...");
         }
     }
 }

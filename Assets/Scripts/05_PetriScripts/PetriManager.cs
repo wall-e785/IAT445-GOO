@@ -13,7 +13,7 @@ public class PetriManager : MonoBehaviour
     private void Awake()
     {
         AudioManager.Instance.PlaySound("office-1");
-        UIManager.Instance.setText("Eat and grow. Grab food and drag it towards yourself to eat.");
+        UIManager.Instance.setText("Use the side triggers to grab food, and the joysticks to pull food towards yourself to eat.");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,8 +29,8 @@ public class PetriManager : MonoBehaviour
         if (goo1 == null && goo2 == null && goo3 == null && !done && !introPlaying)
         {
             done = true;
-            AudioManager.Instance.PlaySound("office-2.1");
-            StartCoroutine(playDelay("office-2.2", 8.5f));
+            AudioManager.Instance.PlaySound("BurpSmall");
+            LevelLoader.instance.LoadNextLevel();
         }
 
     }
@@ -38,18 +38,7 @@ public class PetriManager : MonoBehaviour
     IEnumerator waitForIntro()
     {
         yield return new WaitForSeconds(24);
-        UIManager.Instance.setText("Wait for the right moment to escape... It is watching.");
         introPlaying = false;
-    }
-
-    IEnumerator playDelay(string clipName, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        AudioManager.Instance.PlaySound("BurpSmall");
-        AudioManager.Instance.PlaySound(clipName);
-        yield return new WaitForSeconds(5);
-        LevelLoader.instance.LoadNextLevel();
-
     }
 
 }
