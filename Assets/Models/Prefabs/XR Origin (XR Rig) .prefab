@@ -388,6 +388,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  CafSizeCheck:
+    m_PersistentCalls:
+      m_Calls: []
+  SecuritySizeCheck:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4160481087184926294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2048,7 @@ MonoBehaviour:
   m_TransformationPriority: 10
   m_UseGravity: 1
   m_UseLocalSpaceGravity: 1
-  m_TerminalVelocity: 90
+  m_TerminalVelocity: 70
   m_GravityAccelerationModifier: 4
   m_UpdateCharacterControllerCenterEachFrame: 1
   m_SphereCastRadius: 0.09
