@@ -26,7 +26,6 @@ public class PickUpManager : MonoBehaviour
             case "WarehouseKey":
             case "BlueKey":
             case "PinkKey":
-            case "GooDrop":
                 if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
                     clipName = "PUSmallest";
