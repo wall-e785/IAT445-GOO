@@ -19,8 +19,8 @@ public class SecurityBotStun : MonoBehaviour
                 AudioManager.Instance.PlaySound("Negative");
 
                 //choose random sound to play
-                int soundToPlay = (int)UnityEngine.Random.Range(1, 8);
-                string soundName = "Absorb" + soundToPlay;
+                int soundToPlay = (int)UnityEngine.Random.Range(1, 2);
+                string soundName = "securitybot" + soundToPlay;
                 AudioManager.Instance.PlaySound(soundName);
 
                 Destroy(other.transform.parent.gameObject);
