@@ -29,6 +29,7 @@ public class CheckKey : MonoBehaviour
             else if(tag == "BlueKey")
             {
                 AudioManager.Instance.PlaySound("Security Room Door Open");
+                UIManager.Instance.setText("Find the Pink Keycard to escape!");
             }
         }
     }

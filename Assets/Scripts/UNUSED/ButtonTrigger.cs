@@ -5,16 +5,16 @@ using UnityEngine.Events;
 //referenced from https://www.youtube.com/watch?v=_pApJDiFxV4
 public class ButtonTrigger : MonoBehaviour
 {
+    public Animator forkAnimator;
     private bool pressed = false;
-    public UnityEvent onPressed;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Button" && pressed == false)
         {
-            Debug.Log("I have been pressed");
+            forkAnimator.SetBool("Activated", true);
+            AudioManager.Instance.PlaySound("License");
             pressed = true;
-            onPressed?.Invoke();
         }
     }
 }
