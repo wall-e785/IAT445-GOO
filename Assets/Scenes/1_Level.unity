@@ -8532,7 +8532,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
       propertyPath: text
-      value: Find a way to remove the screws.
+      value: "Use the \u2018?\u2019 button to activate goo power ray. The ray can
+        shrink/grow some objects."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
+      propertyPath: thought
+      value: Goo is strong...
       objectReference: {fileID: 0}
     - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
       propertyPath: m_Enabled
