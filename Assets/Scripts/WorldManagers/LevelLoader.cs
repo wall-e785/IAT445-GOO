@@ -4,49 +4,80 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator transition;
+    //public Animator transition;
     public float transitionTime = 1;
     public static LevelLoader instance;
+    public FadeScript fader;
+    
 
-    private void Awake()
+    void Awake()
     {
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
         else
         {
             Destroy(this);
         }
     }
-    void Update()
+
+    void Start()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    LoadNextLevel();
-        //}
+        fader.FadeIn();
+        StartCoroutine(DisableQuad());
     }
 
     public void LoadNextLevel()
     {
+        fader.gameObject.SetActive(true);
         int currLevel = SceneManager.GetActiveScene().buildIndex;
         if (currLevel < 4)
         {
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+            StartCoroutine(LoadLevelAsync(SceneManager.GetActiveScene().buildIndex + 1));
         }
         else
         {
-            StartCoroutine(LoadLevel(0));
+            StartCoroutine(LoadLevelAsync(0));
         }
     }
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        instance.transition.SetBool("StartTransition", true);
+        //instance.transition.SetBool("StartTransition", true);
+        fader.FadeOut();
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
-        yield return new WaitForSeconds(2);
-        instance.transition.SetBool("StartTransition", false);
+        //yield return new WaitForSeconds(2);
+        //instance.transition.SetBool("StartTransition", false);
+    }
+
+    IEnumerator DisableQuad()
+    {
+        float timer = 0;
+        while (timer <= fader.fadeDuration)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        fader.gameObject.SetActive(false);
+    }
+
+    IEnumerator LoadLevelAsync(int levelIndex)
+    {
+        fader.FadeOut();
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
+        operation.allowSceneActivation = false;
+
+        float timer = 0;
+        while (timer <= fader.fadeDuration && !operation.isDone)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        operation.allowSceneActivation = true;
+
     }
 }
