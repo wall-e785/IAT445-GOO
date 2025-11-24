@@ -8,11 +8,20 @@ public class XROriginScale : MonoBehaviour
 {
     public Transform xrOriginTransform;
     public Transform camera;
+    public MouthTrigger mouth;
 
     private bool grow = false;
     private bool shrink = false;
     private float minHeight = 0.5f;
-    private float maxHeight = 3f;
+    private float maxHeight = 4f;
+
+    //used to spawn droplets when shrunk
+    public GameObject gooDropletPrefab;
+    public Transform pos1;
+    public Transform pos2;
+    public Transform pos3;
+    public Transform pos4;
+    public Transform pos5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,27 +32,24 @@ public class XROriginScale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int currScene = SceneManager.GetActiveScene().buildIndex;
+        string currScene = SceneManager.GetActiveScene().name;
         if (grow)
         {
-            if (currScene == 2)
+            if (currScene == "1_Level")
             {
                 GrowPlayer(.03f);
-            }
-            else if (currScene == 3)
+            }else if(currScene == "2_Level")
             {
                 GrowPlayer(.015f);
-            }else if (currScene == 4) {
-                GrowPlayer(.02f);
             }else
             {
-                GrowPlayer(.02f);
+                GrowPlayer(.05f);
             }
         }
 
         if (shrink)
         {
-            if(currScene == 3)
+            if(currScene == "2_Level")
             {
                 ShrinkPlayer(.02f);
             }
@@ -60,6 +66,39 @@ public class XROriginScale : MonoBehaviour
     {
         shrink = true;
         StartCoroutine(StopShrink(delay));
+
+        dropsToSpawn();
+
+    }
+
+    //check how many goo drops should spawn based on the player's eat count
+    private void dropsToSpawn()
+    {
+        int eatCount = mouth.getEatCount();
+        int maxDeduction = 3;
+        int toDeduct = 0;
+        while(maxDeduction > 0 && eatCount > 0)
+        {
+            maxDeduction--;
+            toDeduct++;
+        }
+
+        Debug.Log("Removing from eat count: " + toDeduct);
+
+        if (toDeduct >= 1)
+        {
+            Instantiate(gooDropletPrefab, pos1.position, pos1.rotation);
+        }
+        if (toDeduct >= 2)
+        {
+            Instantiate(gooDropletPrefab, pos2.position, pos2.rotation);
+        }
+        if(toDeduct == 3)
+        {
+            Instantiate(gooDropletPrefab, pos3.position, pos3.rotation);
+        }
+
+        mouth.subtractEatCount(toDeduct);
     }
 
     IEnumerator StopGrow(float delay)
@@ -84,7 +123,7 @@ public class XROriginScale : MonoBehaviour
             cc.height = cc.height+ amnt;//multiplies the character controller height by shrink factor
             cc.radius = cc.radius+ .001f;//multiplies the character controller body radius by shrink factor
             cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
-            Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
+            //Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
         }
         else
         {
@@ -99,7 +138,7 @@ public class XROriginScale : MonoBehaviour
             offsetPos.y += amnt;//multiply the verticle position of the camera by the shrink factor
             //offsetPos.y = Mathf.Min(offsetPos.y, 2); // Clamp to avoid going underground
             cameraOffset.localPosition = offsetPos;
-            Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
+            //Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
         }
         else
         {
@@ -117,7 +156,7 @@ public class XROriginScale : MonoBehaviour
             cc.height = cc.height - amnt;//multiplies the character controller height by shrink factor
             cc.radius = cc.radius -.001f;//multiplies the character controller body radius by shrink factor
             cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
-            Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
+            //Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
         }
         else
         {
@@ -132,7 +171,7 @@ public class XROriginScale : MonoBehaviour
             offsetPos.y -= amnt;//multiply the verticle position of the camera by the shrink factor
             //offsetPos.y = Mathf.Min(offsetPos.y, 2); // Clamp to avoid going underground
             cameraOffset.localPosition = offsetPos;
-            Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
+            //Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
         }
         else
         {

@@ -33,14 +33,17 @@ public class MouthTrigger : MonoBehaviour
     // Other Triggers
     private int eatCount = 0;
     public UnityEvent<Vector3, float> onTriggered;
-    public UnityEvent CafSizeCheck;
-    public UnityEvent SecuritySizeCheck;
+    public UnityEvent<bool> CafSizeCheck;
+    public UnityEvent<bool> SecuritySizeCheck;
+    private bool cafSoundPlayed = false;
 
+    //visuals
+    private ParticleSystem particles;
 
 
     void Start()
     {
-
+        particles = GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -64,11 +67,12 @@ public class MouthTrigger : MonoBehaviour
         Vector3 scaleIncrement = Vector3.zero;
         float delayIncrement = 0;
 
-        if(other.CompareTag("SmallFood") || other.CompareTag("MediumFood") || other.CompareTag("LargeFood") || other.CompareTag("Rat"))
+        if(other.CompareTag("SmallFood") || other.CompareTag("MediumFood") || other.CompareTag("LargeFood") || other.CompareTag("Rat") || other.CompareTag("GooDrop"))
         {
             switch (other.tag)
             {
                 case "SmallFood":
+                case "GooDrop":
                     liftAmount = smallLift;
                     scaleIncrement = smallFoodScale;
                     delayIncrement = .2f;
@@ -95,6 +99,11 @@ public class MouthTrigger : MonoBehaviour
                     break;
             }
 
+            if (particles)
+            {
+                particles.Play();
+            }
+
             Debug.Log("EatCount: " + eatCount);
 
             //switch to check for eatCount for each scene's specific puzzle, as well as playing sound effects.
@@ -104,6 +113,7 @@ public class MouthTrigger : MonoBehaviour
                     if(eatCount >=3)
                     {
                         AudioManager.Instance.PlaySound("Good Job");
+                        UIManager.Instance.setThought("...Bye Friends...");
                     }
                     break;
                 case "1_Level": //checks for the office level
@@ -128,31 +138,61 @@ public class MouthTrigger : MonoBehaviour
                     }
                     if (eatCount >= 18)
                     {
-                        CafSizeCheck?.Invoke();
+                        CafSizeCheck?.Invoke(true);
                         UIManager.Instance.setText("Escape through the garbage chute.");
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
+                    }else if (eatCount >= 9 && !cafSoundPlayed)
+                    {
+                        AudioManager.Instance.PlaySound("caf-2");
+                        cafSoundPlayed = true;
+                    }
+                    else
+                    {
+                        CafSizeCheck?.Invoke(false);
                     }
                     break;
                 case "3-4_Level":
-                    if(eatCount >= 24)
+                    switch (other.tag)
                     {
-                        SecuritySizeCheck?.Invoke();
+                        case "SmallFood":
+                            AudioManager.Instance.PlaySound("ChewSmall");
+                            break;
+                        case "MediumFood":
+                        case "LargeFood":
+                            AudioManager.Instance.PlaySound("ChewBig");
+                            break;
+                    }
+                    if (eatCount >= 24)
+                    {
+                        SecuritySizeCheck?.Invoke(true);
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
+                    }
+                    else
+                    {
+                        SecuritySizeCheck?.Invoke(false);
                     }
                     break;
             }
 
-            if (!other.CompareTag("Rat") && !(SceneManager.GetActiveScene().buildIndex == 5))
+            if (other.CompareTag("Rat"))
             {
+                Destroy(other.gameObject);
+            }
+            else if(other.CompareTag("GooDrop"))
+            {
+                int soundToPlay = (int)UnityEngine.Random.Range(1, 8);
+                string soundName = "Absorb" + soundToPlay;
+                AudioManager.Instance.PlaySound(soundName);
                 Destroy(other.transform.parent.gameObject);
             }
             else
             {
-                Destroy(other.gameObject);
+                Destroy(other.transform.parent.gameObject);
             }
             onTriggered?.Invoke(scaleIncrement, delayIncrement);
+
 
             // Animate lift and scale
             //Vector3 targetPosition = xrOrigin.position + new Vector3(0, liftAmount, 0);
@@ -162,6 +202,18 @@ public class MouthTrigger : MonoBehaviour
             //StartCoroutine(ScalePlayer(targetScale, 1.5f));
         }
 
+    }
+
+    public int getEatCount()
+    {
+        return eatCount;
+    }
+
+    public void subtractEatCount(int count)
+    {
+        eatCount = eatCount - count;
+        if (eatCount < 0) eatCount = 0;
+        Debug.Log("Eat Count Subtracted to: " + eatCount);
     }
 
     IEnumerator LiftPlayer(Vector3 targetPosition, float duration)
