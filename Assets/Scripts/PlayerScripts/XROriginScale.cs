@@ -12,7 +12,7 @@ public class XROriginScale : MonoBehaviour
     private bool grow = false;
     private bool shrink = false;
     private float minHeight = 0.5f;
-    private float maxHeight = 4f;
+    private float maxHeight = 3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,24 +23,27 @@ public class XROriginScale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string currScene = SceneManager.GetActiveScene().name;
+        int currScene = SceneManager.GetActiveScene().buildIndex;
         if (grow)
         {
-            if (currScene == "1_Level")
+            if (currScene == 2)
             {
                 GrowPlayer(.03f);
-            }else if(currScene == "2_Level")
+            }
+            else if (currScene == 3)
             {
                 GrowPlayer(.015f);
+            }else if (currScene == 4) {
+                GrowPlayer(.02f);
             }else
             {
-                GrowPlayer(.05f);
+                GrowPlayer(.02f);
             }
         }
 
         if (shrink)
         {
-            if(currScene == "2_Level")
+            if(currScene == 3)
             {
                 ShrinkPlayer(.02f);
             }
