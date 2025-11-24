@@ -10,7 +10,7 @@ public class TextTrigger : MonoBehaviour
     {
         if (other.tag == "Player" && !changed)
         {
-            UIManager.Instance.setText(text);
+            if(text != null) UIManager.Instance.setText(text);
             if(thought != null) UIManager.Instance.setThought(thought);
             changed = true;
         }
