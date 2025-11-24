@@ -1,24 +1,22 @@
 using UnityEngine;
-using System.Collections;
 
 public class OfficeManager : MonoBehaviour
 {
 
     private void Awake()
     {
-        UIManager.Instance.setText("Find a way to escape through the vent. Use ‘?’ button to jump.");
+        UIManager.Instance.setText("Escape the desk.");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AudioManager.Instance.PlaySound("office-2.1");
-        StartCoroutine(playDelay("office-2.2", 8.5f));
+        
     }
 
-    IEnumerator playDelay(string clipName, float delay)
+    // Update is called once per frame
+    void Update()
     {
-        yield return new WaitForSeconds(delay);
-        AudioManager.Instance.PlaySound(clipName);
+
     }
 }

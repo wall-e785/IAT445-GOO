@@ -9,7 +9,6 @@ public class CafSizeCheck : MonoBehaviour
     private bool bigEnough = false;
     private bool unlocked = false;
     private bool displaying = false;
-    private bool soundPlayed = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,13 +19,6 @@ public class CafSizeCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void sizeCheck(bool val)
-    {
-        bigEnough = val;
-
         if (bigEnough && !unlocked)
         {
             unlocked = true;
@@ -39,26 +31,12 @@ public class CafSizeCheck : MonoBehaviour
 
             rb1.constraints = RigidbodyConstraints.None;
             rb2.constraints = RigidbodyConstraints.None;
-
-            if (!soundPlayed)
-            {
-                AudioManager.Instance.PlaySound("caf-3");
-                soundPlayed = true;
-            }
         }
-        else
-        {
-            unlocked = false;
-            blockerOne.GetComponent<XRGrabInteractable>().enabled = false;
-            blockerTwo.GetComponent<XRGrabInteractable>().enabled = false;
+    }
 
-
-            Rigidbody rb1 = blockerOne.GetComponent<Rigidbody>();
-            Rigidbody rb2 = blockerTwo.GetComponent<Rigidbody>();
-
-            rb1.constraints = RigidbodyConstraints.FreezeAll;
-            rb2.constraints = RigidbodyConstraints.FreezeAll;
-        }
+    public void sizeCheck()
+    {
+        bigEnough = true;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -69,8 +47,7 @@ public class CafSizeCheck : MonoBehaviour
             if (!displaying)
             {
                 displaying = true;
-                AudioManager.Instance.PlaySound("Negative");
-                StartCoroutine(Display("Goo still hungry... Goo need MORE food..."));
+                StartCoroutine(Display("Goo... Need MORE Food..."));
             }
 
         }

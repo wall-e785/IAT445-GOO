@@ -28,7 +28,6 @@ TagManager:
   - RegularPU
   - BlueKey
   - PinkKey
-  - GooDrop
   layers:
   - Default
   - TransparentFX
