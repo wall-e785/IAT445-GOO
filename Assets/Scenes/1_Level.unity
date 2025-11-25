@@ -800,7 +800,7 @@ Transform:
   m_GameObject: {fileID: 121865558}
   serializedVersion: 2
   m_LocalRotation: {x: -0.258819, y: 0, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 0, y: -0.12, z: 0.69}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8764,8 +8764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
       propertyPath: text
-      value: "Use the \u2018?\u2019 button to activate goo power ray. The ray can
-        shrink/grow some objects."
+      value: Use the red goo power ray. The ray can shrink/grow some objects.
       objectReference: {fileID: 0}
     - target: {fileID: 4565420937108789972, guid: d4c89da0310353f43a4b3db01795c754, type: 3}
       propertyPath: thought

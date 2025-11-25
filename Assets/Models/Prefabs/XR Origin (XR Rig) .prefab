@@ -7377,7 +7377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb4e6cd73f7e4439db1b9761775310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeScript
-  fadeDuration: 2
+  fadeDuration: 3.5
   fadeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8307626663293017245
 GameObject:
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_TransformationPriority: 10
   m_UseGravity: 1
   m_UseLocalSpaceGravity: 1
-  m_TerminalVelocity: 60
+  m_TerminalVelocity: 50
   m_GravityAccelerationModifier: 4
   m_UpdateCharacterControllerCenterEachFrame: 1
   m_SphereCastRadius: 0.09
