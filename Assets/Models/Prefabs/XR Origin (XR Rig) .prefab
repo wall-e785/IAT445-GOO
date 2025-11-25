@@ -5398,6 +5398,7 @@ Transform:
   - {fileID: 7593540849576778809}
   - {fileID: 4437676229447937398}
   - {fileID: 6087228934838708942}
+  - {fileID: 7408058304645179743}
   m_Father: {fileID: 4143047710134167168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3629790868969720395
@@ -6730,59 +6731,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &8307626663293017245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7408058304645179743}
-  m_Layer: 0
-  m_Name: DropletSpawns
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7408058304645179743
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8307626663293017245}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1930325127999600837}
-  - {fileID: 722986672761703267}
-  - {fileID: 8121272264814105401}
-  - {fileID: 7205154931932202621}
-  - {fileID: 1791425550905180490}
-  m_Father: {fileID: 3576701622501323134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4220795990289997901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7899211015111550871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64d299502104b064388841ec2adf6def, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 7977126777687764009}
-  m_AimTargetObject: {fileID: 3538688985756467693}
-  m_UseLocalSpace: 0
-  m_AngleStabilization: 20
-  m_PositionStabilization: 0.25
 --- !u!1 &8063074337920339288
 GameObject:
   m_ObjectHideFlags: 0
@@ -6887,6 +6835,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FadeScript
   fadeDuration: 2
   fadeColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!1 &8307626663293017245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7408058304645179743}
+  m_Layer: 0
+  m_Name: DropletSpawns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7408058304645179743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307626663293017245}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1930325127999600837}
+  - {fileID: 722986672761703267}
+  - {fileID: 8121272264814105401}
+  - {fileID: 7205154931932202621}
+  - {fileID: 1791425550905180490}
+  m_Father: {fileID: 3576701622501323134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8332257050567276304
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,7 +7103,7 @@ MonoBehaviour:
   m_TransformationPriority: 10
   m_UseGravity: 1
   m_UseLocalSpaceGravity: 1
-  m_TerminalVelocity: 90
+  m_TerminalVelocity: 60
   m_GravityAccelerationModifier: 4
   m_UpdateCharacterControllerCenterEachFrame: 1
   m_SphereCastRadius: 0.09
