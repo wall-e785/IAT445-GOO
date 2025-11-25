@@ -77555,7 +77555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1779710513698781362, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_MoveSpeed
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2648335505965700605, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: SecuritySizeCheck.m_PersistentCalls.m_Calls.Array.size
@@ -134770,7 +134770,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a01aa881b0b1a9046b497424bdff0ec1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -159143,8 +159143,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 6.89, z: 15.2}
-  m_Center: {x: 0.89, y: 3.18, z: 0}
+  m_Size: {x: 0.85880154, y: 11.797562, z: 15.2}
+  m_Center: {x: 0.96059924, y: 5.6337814, z: -5.5991504e-16}
 --- !u!1 &1533731290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 83d23e7c4399bc64d8b3bf7a9f296030, type: 3}
