@@ -675,7 +675,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8559113765343674383}
   - {fileID: 4143047710134167168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -5833,6 +5832,7 @@ Transform:
   m_Children:
   - {fileID: 5683924715779303883}
   - {fileID: 7593540849576778809}
+  - {fileID: 8559113765343674383}
   - {fileID: 4437676229447937398}
   - {fileID: 6087228934838708942}
   - {fileID: 7408058304645179743}
@@ -9219,7 +9219,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6864535492956239172}
+    m_TransformParent: {fileID: 3576701622501323134}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalScale.x
@@ -9239,11 +9239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.68
+      value: -0.6800003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9251,15 +9251,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf395265e3aa174f89a2b3e604121aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9503,14 +9503,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IKTargetFollowVRRig
   turnSmoothness: 0.1
-  head:
-    vrTarget: {fileID: 9139320153955268681}
-    ikTarget: {fileID: 4458464498421507544}
-    trackingPositionOffset: {x: 0, y: 0, z: 0}
-    trackingRotationOffset: {x: 0, y: 0, z: 0}
   leftHand:
     vrTarget: {fileID: 2607222904668956089}
-    ikTarget: {fileID: 553475257195181005}
+    ikTarget: {fileID: 8125662293481501635}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 0, y: 0, z: 0}
   rightHand:
