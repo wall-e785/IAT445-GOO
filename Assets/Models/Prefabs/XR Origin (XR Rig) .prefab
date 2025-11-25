@@ -365,7 +365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7233077257896606342
 Transform:
   m_ObjectHideFlags: 0
@@ -375,8 +375,8 @@ Transform:
   m_GameObject: {fileID: 1466434408227029774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0975, z: -0.0483}
-  m_LocalScale: {x: 0.018248651, y: 0.17504106, z: 0.018248651}
+  m_LocalPosition: {x: 0, y: -0.145, z: -0.0483}
+  m_LocalScale: {x: 0.018248651, y: 0.27, z: 0.018248651}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5298147994596953067}
@@ -655,6 +655,7 @@ GameObject:
   - component: {fileID: 5621574696480441292}
   - component: {fileID: 7883502530045402453}
   - component: {fileID: 85568376738486518}
+  - component: {fileID: 2681764269983012436}
   m_Layer: 2
   m_Name: 'XR Origin (XR Rig) '
   m_TagString: Player
@@ -811,6 +812,18 @@ MonoBehaviour:
   pos3: {fileID: 8121272264814105401}
   pos4: {fileID: 7205154931932202621}
   pos5: {fileID: 1791425550905180490}
+--- !u!114 &2681764269983012436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524394122255964103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a35f3a7e15bb8344b2508e6ba25a95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!1 &3792921684678381676
 GameObject:
   m_ObjectHideFlags: 0
@@ -7853,7 +7866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3672665254724295635
 Transform:
   m_ObjectHideFlags: 0
@@ -7863,8 +7876,8 @@ Transform:
   m_GameObject: {fileID: 9029405206743653814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.097500086, z: -0.048301697}
-  m_LocalScale: {x: 0.018248651, y: 0.17504106, z: 0.018248651}
+  m_LocalPosition: {x: 0, y: -0.1450007, z: -0.048301697}
+  m_LocalScale: {x: 0.018248651, y: 0.27, z: 0.018248651}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 126986412582037331}
@@ -8183,7 +8196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8229381180640938747, guid: b200f6587d118224eba8467281481800, type: 3}
       propertyPath: m_CastDistance
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8705,7 +8718,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1255647619390271626, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
       propertyPath: m_CastDistance
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4804964734930210078, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
       propertyPath: m_Name
