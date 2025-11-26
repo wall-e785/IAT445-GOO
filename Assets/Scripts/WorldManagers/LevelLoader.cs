@@ -77,6 +77,15 @@ public class LevelLoader : MonoBehaviour
             yield return null;
         }
 
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            yield return new WaitForSeconds(3);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1);
+        }
+
         operation.allowSceneActivation = true;
 
     }

@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: ParticlesGoal
+  - Name: LevelLoader
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

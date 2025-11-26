@@ -8,7 +8,6 @@ public class CafManager : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PlaySound("Drop");
-        AudioManager.Instance.PlaySound("caf-4");
         UIManager.Instance.setText("Avoid the CatBot. Move the obstacles to reach the garbage chute.");
         StartCoroutine(playDelay("caf-1", 7));
 
@@ -16,6 +15,8 @@ public class CafManager : MonoBehaviour
 
     IEnumerator playDelay(string clipName, float delay)
     {
+        yield return new WaitForSeconds(.5f);
+        AudioManager.Instance.PlaySound("caf-4");
         yield return new WaitForSeconds(delay);
         AudioManager.Instance.PlaySound(clipName);
     }
