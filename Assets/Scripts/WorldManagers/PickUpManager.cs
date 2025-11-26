@@ -5,22 +5,25 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class PickUpManager : MonoBehaviour
 {
-    string tag;
-    string clipName;
+    private string tagName;
+    private string clipName;
     private XRGrabInteractable grab;
+    public ParticleSystem affordance;
+    
 
     void Awake()
     {
         grab = GetComponent<XRGrabInteractable>();
         grab.selectEntered.AddListener(OnPickedUp);
+        grab.selectExited.AddListener(OnReleased);
         //Debug.Log(grab);
     }
 
     void Start()
     {
-        tag = gameObject.tag;
+        tagName = gameObject.tag;
 
-        switch (tag)
+        switch (tagName)
         {
             case "SmallFood":
             case "WarehouseKey":
@@ -62,12 +65,19 @@ public class PickUpManager : MonoBehaviour
                 break;
         }
 
-        Debug.Log(tag);
+        Debug.Log(tagName);
     }
 
     private void OnPickedUp(SelectEnterEventArgs args)
     {
         Debug.Log("playing sound");
         AudioManager.Instance.PlaySound(clipName);
+        affordance.Stop();
+        affordance.Clear();
+    }
+
+    private void OnReleased(SelectExitEventArgs args)
+    {
+        affordance.Play();
     }
 }

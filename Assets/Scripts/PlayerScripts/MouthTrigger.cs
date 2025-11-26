@@ -121,8 +121,8 @@ public class MouthTrigger : MonoBehaviour
                     if (eatCount >= 1)
                     {
                         AudioManager.Instance.PlaySound("office-3");
-                        UIManager.Instance.setText("Create a path to the vent.");
                         AudioManager.Instance.PlaySound("Good Job");
+                        AffordanceManager.Instance.progressParticles();
                     }
                     break;
                 case "2_Level": //checks for the caf level
