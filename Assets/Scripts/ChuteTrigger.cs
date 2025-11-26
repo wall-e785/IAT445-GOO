@@ -40,9 +40,9 @@ public class ChuteTrigger : MonoBehaviour
     //    }
     //}
 
-    public void bigEnough()
+    public void bigEnough(bool val)
     {
-        sizeCheck = true;
+        sizeCheck = val;
     }
 
     void OnTriggerEnter(Collider other)

@@ -856,7 +856,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.037998438, z: 0.33499908}
-  m_LocalScale: {x: 0.10406939, y: 0.10406939, z: 0.10406939}
+  m_LocalScale: {x: 0.27424365, y: 0.27424365, z: 0.27424365}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3576701622501323134}
@@ -876,7 +876,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3792921684678381676}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7064,7 +7064,7 @@ MonoBehaviour:
   m_Mediator: {fileID: 7962968812155573832}
   m_TransformationPriority: 0
   m_DisableGravityDuringJump: 0
-  m_UnlimitedInAirJumps: 1
+  m_UnlimitedInAirJumps: 0
   m_InAirJumpCount: 1
   m_JumpForgivenessWindow: 0.25
   m_JumpHeight: 12
@@ -7377,7 +7377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb4e6cd73f7e4439db1b9761775310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeScript
-  fadeDuration: 2
+  fadeDuration: 3.5
   fadeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8307626663293017245
 GameObject:
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_TransformationPriority: 10
   m_UseGravity: 1
   m_UseLocalSpaceGravity: 1
-  m_TerminalVelocity: 60
+  m_TerminalVelocity: 50
   m_GravityAccelerationModifier: 4
   m_UpdateCharacterControllerCenterEachFrame: 1
   m_SphereCastRadius: 0.09

@@ -2,7 +2,7 @@
 - Project name: IAT445-GOO
 - Unity version: Unity 6000.2.8f1
 - Active game object:
-  - Name: Move
+  - Name: UIManager
   - Tag: Untagged
-  - Layer: Ignore Raycast
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
