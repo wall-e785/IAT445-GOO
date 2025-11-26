@@ -9237,13 +9237,13 @@ MonoBehaviour:
   leftHand:
     vrTarget: {fileID: 2607222904668956089}
     ikTarget: {fileID: 8125662293481501635}
-    trackingPositionOffset: {x: 0, y: 0, z: 0}
-    trackingRotationOffset: {x: 0, y: 0, z: 0}
+    trackingPositionOffset: {x: 0, y: -0.02, z: -0.17}
+    trackingRotationOffset: {x: -90, y: 90, z: 0}
   rightHand:
     vrTarget: {fileID: 545666814677816357}
     ikTarget: {fileID: 3934381898311415183}
-    trackingPositionOffset: {x: 0, y: 0, z: 0}
-    trackingRotationOffset: {x: 0, y: 0, z: 0}
+    trackingPositionOffset: {x: 0, y: -0.05, z: -0.15}
+    trackingRotationOffset: {x: 79.8, y: -6.47, z: 90}
   headBodyPositionOffset: {x: 0, y: 0, z: 0}
   headBodyYawOffset: 0
 --- !u!1001 &8936503572172851818
