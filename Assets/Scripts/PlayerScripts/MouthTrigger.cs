@@ -121,8 +121,8 @@ public class MouthTrigger : MonoBehaviour
                     if (eatCount >= 1)
                     {
                         AudioManager.Instance.PlaySound("office-3");
-                        UIManager.Instance.setText("Create a path to the vent.");
                         AudioManager.Instance.PlaySound("Good Job");
+                        AffordanceManager.Instance.progressParticles();
                     }
                     break;
                 case "2_Level": //checks for the caf level
@@ -142,7 +142,9 @@ public class MouthTrigger : MonoBehaviour
                         UIManager.Instance.setText("Escape through the garbage chute.");
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
-                    }else if (eatCount >= 9 && !cafSoundPlayed)
+                        UIManager.Instance.setThought("GOO POWER!");
+                    }
+                    else if (eatCount >= 9 && !cafSoundPlayed)
                     {
                         AudioManager.Instance.PlaySound("caf-2");
                         cafSoundPlayed = true;
@@ -150,6 +152,18 @@ public class MouthTrigger : MonoBehaviour
                     else
                     {
                         CafSizeCheck?.Invoke(false);
+                    }
+
+                    //progress for player
+                    if(eatCount < 6)
+                    {
+                        UIManager.Instance.setThought("Still weak... Need food...");
+                    }else if (eatCount < 10)
+                    {
+                        UIManager.Instance.setThought("My stomach is only half full.");
+                    }else if(eatCount < 18)
+                    {
+                        UIManager.Instance.setThought("Almost... Enough...");
                     }
                     break;
                 case "3-4_Level":

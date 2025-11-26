@@ -3,7 +3,6 @@ using System.Collections;
 
 public class OfficeManager : MonoBehaviour
 {
-
     private void Awake()
     {
         UIManager.Instance.setText("Find a way to escape through the vent. Use ‘A’ button to jump.");
@@ -21,4 +20,5 @@ public class OfficeManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         AudioManager.Instance.PlaySound(clipName);
     }
+
 }

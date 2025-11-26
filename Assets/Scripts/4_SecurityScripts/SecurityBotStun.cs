@@ -11,7 +11,7 @@ public class SecurityBotStun : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             if (!stunned)
             {
@@ -19,11 +19,11 @@ public class SecurityBotStun : MonoBehaviour
                 AudioManager.Instance.PlaySound("Negative");
 
                 //choose random sound to play
-                int soundToPlay = (int)UnityEngine.Random.Range(1, 2);
+                int soundToPlay = Random.Range(1, 2);
                 string soundName = "securitybot" + soundToPlay;
                 AudioManager.Instance.PlaySound(soundName);
 
-                Destroy(other.transform.parent.gameObject);
+                //Destroy(other.transform.parent.gameObject);
                 locomotion.SetActive(false);
                 onTriggered?.Invoke(new Vector3(.5f, .5f, .5f), .5f);
                 StartCoroutine(stunDelay());

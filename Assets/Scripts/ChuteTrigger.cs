@@ -59,7 +59,7 @@ public class ChuteTrigger : MonoBehaviour
 
     IEnumerator activateSceneTrigger()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(0);
         sceneTrigger.SetActive(true);
     }
 

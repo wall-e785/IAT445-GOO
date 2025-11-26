@@ -13,7 +13,7 @@ public class CatBotStun : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
            
             if (!soundPlayed)

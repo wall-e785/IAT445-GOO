@@ -14,7 +14,7 @@ public class ButtonController : MonoBehaviour
     {
         leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
         rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        if(leftController==null || rightController == null)
+        if (leftController == null || rightController == null)
         {
             Debug.Log("couldn't find controllers");
         }
@@ -37,5 +37,12 @@ public class ButtonController : MonoBehaviour
 
         if (rightController.TryGetFeatureValue(CommonUsages.secondaryButton, out bool bPressed) && bPressed)
             Debug.Log("B button pressed");
+
+        if (!leftController.isValid)
+            leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+
+        if (!rightController.isValid)
+            rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+
     }
 }
