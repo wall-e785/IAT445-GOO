@@ -189989,55 +189989,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.05
+      value: 1.63779
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.05
+      value: 1.63779
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.05
+      value: 1.63779
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.778862
+      value: -8.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.357111
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.629456
+      value: -19.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5086024
+      value: 0.8818419
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.48862588
+      value: 0.07519276
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.34308034
+      value: 0.08595713
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.6203744
+      value: -0.4575066
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 29.691
+      value: 12.197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -125.471
+      value: -355.141
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -63.51
+      value: -54.322
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -190057,7 +190057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -190067,9 +190067,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1883282400}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1883282402}
   m_SourcePrefab: {fileID: 100100000, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
 --- !u!1 &1883282399 stripped
@@ -190077,29 +190074,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aff41d0ea10dadb4eafb655e7082699c, type: 3}
   m_PrefabInstance: {fileID: 1883282398}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1883282400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883282399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
-  m_Target: {fileID: 2032583939}
-  m_PlayOnAwake: 1
-  m_LoopMode: 1
-  m_Method: 1
-  m_Duration: 41.91614
-  m_MaxSpeed: 250
-  m_EasingMode: 0
-  m_AlignmentMode: 1
-  m_ObjectForwardAxis: 5
-  m_ObjectUpAxis: 3
-  m_StartOffset: 0
 --- !u!64 &1883282402
 MeshCollider:
   m_ObjectHideFlags: 0
