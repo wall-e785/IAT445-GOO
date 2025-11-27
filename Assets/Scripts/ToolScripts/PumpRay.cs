@@ -22,15 +22,19 @@ public class PumpRay : MonoBehaviour
         switch (other.tag)
         {
             case "Screw1":
+                AudioManager.Instance.PlaySound("Screwing1");
                 onTriggeredS1?.Invoke();
                 break;
             case "Screw2":
+                AudioManager.Instance.PlaySound("Screwing2");
                 onTriggeredS2?.Invoke();
                 break;
             case "Screw3":
+                AudioManager.Instance.PlaySound("Screwing1");
                 onTriggeredS3?.Invoke();
                 break;
             case "Screw4":
+                AudioManager.Instance.PlaySound("Screwing2");
                 onTriggeredS4?.Invoke();
                 break;
             case "B1":
