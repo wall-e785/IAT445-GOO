@@ -6,6 +6,7 @@ public class FadeScript : MonoBehaviour
     public float fadeDuration = 2;
     public Color fadeColor;
     private Renderer rend;
+    private char direction; //I/O to represent In/Out
 
     void Awake()
     {
@@ -20,11 +21,13 @@ public class FadeScript : MonoBehaviour
 
     public void FadeIn()
     {
+        direction = 'I';
         Fade(1, 0);
     }
 
     public void FadeOut()
     {
+        direction = 'O';
         Fade(0, 1);
     }
 
@@ -45,6 +48,10 @@ public class FadeScript : MonoBehaviour
         rend.material.SetColor("_Color", newColor2);
 
         yield return null;
-        this.gameObject.SetActive(false);
+
+        if(direction == 'I')
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }
