@@ -159,13 +159,13 @@ public class MouthTrigger : MonoBehaviour
                     //progress for player
                     if(eatCount < 6)
                     {
-                        UIManager.Instance.setThought("Still weak... Need food...");
+                        UIManager.Instance.setThought("Still weak... Need food... :(");
                     }else if (eatCount < 10)
                     {
-                        UIManager.Instance.setThought("My stomach is only half full.");
+                        UIManager.Instance.setThought("My stomach is only half full. :l");
                     }else if(eatCount < 18)
                     {
-                        UIManager.Instance.setThought("Almost... Enough...");
+                        UIManager.Instance.setThought("Almost... Enough... :)");
                     }
                     break;
                 case "3-4_Level":
@@ -188,6 +188,20 @@ public class MouthTrigger : MonoBehaviour
                     else
                     {
                         SecuritySizeCheck?.Invoke(false);
+                    }
+
+                    //progress for player
+                    if (eatCount < 6)
+                    {
+                        UIManager.Instance.setThought("Still Short... :(");
+                    }
+                    else if (eatCount < 12)
+                    {
+                        UIManager.Instance.setThought("Halfway... :l");
+                    }
+                    else if (eatCount < 24)
+                    {
+                        UIManager.Instance.setThought("Goo grow... :)");
                     }
                     break;
             }
