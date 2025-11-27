@@ -46,6 +46,9 @@ public class PickUpManager : MonoBehaviour
             case "LargeFood":
             case "B1":
             case "B2":
+            case "B3":
+            case "B4":
+            case "B5":
                 clipName = "PULarge";
                 break;
             case "LargePU":
@@ -57,11 +60,6 @@ public class PickUpManager : MonoBehaviour
                 {
                     clipName = "PULarge";
                 }
-                break;
-            case "B3":
-            case "B4":
-            case "B5":
-                clipName = "PULargest";
                 break;
         }
 

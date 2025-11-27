@@ -17,6 +17,45 @@ public class PumpRay : MonoBehaviour
     public UnityEvent onTriggeredB4;
     public UnityEvent onTriggeredB5;
 
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "Screw1":
+                onTriggeredS1?.Invoke();
+                break;
+            case "Screw2":
+                onTriggeredS2?.Invoke();
+                break;
+            case "Screw3":
+                onTriggeredS3?.Invoke();
+                break;
+            case "Screw4":
+                onTriggeredS4?.Invoke();
+                break;
+            case "B1":
+                AudioManager.Instance.PlaySound("Goo Box Grow");
+                onTriggeredB1?.Invoke();
+                break;
+            case "B2":
+                AudioManager.Instance.PlaySound("Goo Box Grow");
+                onTriggeredB2?.Invoke();
+                break;
+            case "B3":
+                AudioManager.Instance.PlaySound("Goo Box Grow");
+                onTriggeredB3?.Invoke();
+                break;
+            case "B4":
+                AudioManager.Instance.PlaySound("Goo Box Grow");
+                onTriggeredB4?.Invoke();
+                break;
+            case "B5":
+                AudioManager.Instance.PlaySound("Goo Box Grow");
+                onTriggeredB5?.Invoke();
+                break;
+
+        }
+    }
     public void OnTriggerStay(Collider other)
     {
         switch (other.tag)
