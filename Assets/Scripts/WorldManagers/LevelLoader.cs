@@ -8,8 +8,6 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 1;
     public static LevelLoader instance;
     public FadeScript fader;
-    
-
     void Awake()
     {
         if(instance == null)
@@ -26,15 +24,23 @@ public class LevelLoader : MonoBehaviour
     void Start()
     {
         fader.FadeIn();
-        StartCoroutine(DisableQuad());
+        //StartCoroutine(DisableQuad());
+        if(SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            StartCoroutine(CreditsTimer());
+        }
     }
 
     public void LoadNextLevel()
     {
         fader.gameObject.SetActive(true);
         int currLevel = SceneManager.GetActiveScene().buildIndex;
-        if (currLevel < 4)
+        if (currLevel < 5)
         {
+            if(currLevel == 4)
+            {
+                fader.fadeColor = Color.white;
+            }
             StartCoroutine(LoadLevelAsync(SceneManager.GetActiveScene().buildIndex + 1));
         }
         else
@@ -81,6 +87,10 @@ public class LevelLoader : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
         }
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            yield return new WaitForSeconds(4);
+        }
         else
         {
             yield return new WaitForSeconds(1);
@@ -88,5 +98,11 @@ public class LevelLoader : MonoBehaviour
 
         operation.allowSceneActivation = true;
 
+    }
+
+    IEnumerator CreditsTimer()
+    {
+        yield return new WaitForSeconds(32);
+        LoadNextLevel();
     }
 }

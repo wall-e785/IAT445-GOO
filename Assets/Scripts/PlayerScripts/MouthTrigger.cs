@@ -114,7 +114,7 @@ public class MouthTrigger : MonoBehaviour
                     if(eatCount >=3)
                     {
                         AudioManager.Instance.PlaySound("Good Job");
-                        UIManager.Instance.setThought("...Bye Friends...");
+                        UIManager.Instance.setThought("...Bye Friends... :’)");
                     }
                     break;
                 case "1_Level": //checks for the office level
@@ -123,6 +123,7 @@ public class MouthTrigger : MonoBehaviour
                     {
                         AudioManager.Instance.PlaySound("office-3");
                         AudioManager.Instance.PlaySound("Good Job");
+                        UIManager.Instance.setText("Move the ruler to get onto the shelf.");
                         AffordanceManager.Instance.progressParticles();
                     }
                     break;
@@ -140,10 +141,10 @@ public class MouthTrigger : MonoBehaviour
                     if (eatCount >= 18)
                     {
                         CafSizeCheck?.Invoke(true);
-                        UIManager.Instance.setText("Escape through the garbage chute.");
+                        UIManager.Instance.setText("Search the kitchen for a way out!");
                         AudioManager.Instance.PlaySound("Good Job");
                         AudioManager.Instance.PlaySound("BurpBig");
-                        UIManager.Instance.setThought("GOO POWER!");
+                        UIManager.Instance.setThought("Goo is strong... >:)");
                     }
                     else if (eatCount >= 9 && !cafSoundPlayed)
                     {

@@ -8,7 +8,7 @@ public class CafManager : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PlaySound("Drop");
-        UIManager.Instance.setText("Avoid the CatBot. Move the obstacles to reach the garbage chute.");
+        UIManager.Instance.setText("Eat, then find the escape route. Be careful to avoid the CatBot.");
         StartCoroutine(playDelay("caf-1", 7));
 
     }

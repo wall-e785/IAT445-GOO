@@ -30,10 +30,10 @@ public class RulerCheck : MonoBehaviour
     {
         if(other.tag == "Player" && !unlocked)
         {
-            
             if (!displaying) {
                 displaying = true;
-                StartCoroutine(Display("Goo... need food..."));
+                UIManager.Instance.setThought("Goo... need food... :0");
+                UIManager.Instance.setText("Eat the donut to grow bigger.");
                 AudioManager.Instance.PlaySound("Negative");
             }
 
@@ -42,9 +42,7 @@ public class RulerCheck : MonoBehaviour
 
     IEnumerator Display(string text)
     {
-        UIManager.Instance.setThought(text);
         yield return new WaitForSeconds(3);
-        UIManager.Instance.setThought("");
         displaying = false;
     }
 }
