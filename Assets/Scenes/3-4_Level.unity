@@ -76707,6 +76707,10 @@ PrefabInstance:
       propertyPath: m_JumpHeight
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 97091698382972817, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: m_UnlimitedInAirJumps
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 676647817556759281, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: fadeDuration
       value: 2

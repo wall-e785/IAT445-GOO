@@ -20856,6 +20856,10 @@ PrefabInstance:
       propertyPath: m_JumpHeight
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 97091698382972817, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
+      propertyPath: m_UnlimitedInAirJumps
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1779710513698781362, guid: 3168123e7ed80ab4aac422e4dbe67fd2, type: 3}
       propertyPath: m_MoveSpeed
       value: 10
