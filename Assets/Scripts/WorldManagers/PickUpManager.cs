@@ -14,8 +14,13 @@ public class PickUpManager : MonoBehaviour
     void Awake()
     {
         grab = GetComponent<XRGrabInteractable>();
-        grab.selectEntered.AddListener(OnPickedUp);
-        grab.selectExited.AddListener(OnReleased);
+
+        if(grab != null)
+        {
+            grab.selectEntered.AddListener(OnPickedUp);
+            grab.selectExited.AddListener(OnReleased);
+        }
+
         //Debug.Log(grab);
     }
 
@@ -46,6 +51,9 @@ public class PickUpManager : MonoBehaviour
             case "LargeFood":
             case "B1":
             case "B2":
+            case "B3":
+            case "B4":
+            case "B5":
                 clipName = "PULarge";
                 break;
             case "LargePU":
@@ -58,11 +66,6 @@ public class PickUpManager : MonoBehaviour
                     clipName = "PULarge";
                 }
                 break;
-            case "B3":
-            case "B4":
-            case "B5":
-                clipName = "PULargest";
-                break;
         }
 
         Debug.Log(tagName);
@@ -72,12 +75,20 @@ public class PickUpManager : MonoBehaviour
     {
         Debug.Log("playing sound");
         AudioManager.Instance.PlaySound(clipName);
-        affordance.Stop();
-        affordance.Clear();
+
+        if(affordance != null)
+        {
+            affordance.Stop();
+            affordance.Clear();
+        }
+
     }
 
     private void OnReleased(SelectExitEventArgs args)
     {
-        affordance.Play();
+        if(affordance != null)
+        {
+            affordance.Play();
+        }
     }
 }

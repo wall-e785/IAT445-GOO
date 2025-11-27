@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
+using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using static System.TimeZoneInfo;
 using UnityEngine.Events;
 using NUnit.Framework.Constraints;
 using System;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 //i initially wrote this script based off of this tutorial for the food: https://www.youtube.com/watch?v=7dj1m0Izyi0
 //following this, i tried to modify it by adding the scale/position which did not work. The update, ontriggerenter were modified using Microsoft Copilot
@@ -190,21 +191,8 @@ public class MouthTrigger : MonoBehaviour
                     break;
             }
 
-            if (other.CompareTag("Rat"))
-            {
-                Destroy(other.gameObject);
-            }
-            else if(other.CompareTag("GooDrop"))
-            {
-                int soundToPlay = (int)UnityEngine.Random.Range(1, 8);
-                string soundName = "Absorb" + soundToPlay;
-                AudioManager.Instance.PlaySound(soundName);
-                Destroy(other.transform.parent.gameObject);
-            }
-            else
-            {
-                Destroy(other.transform.parent.gameObject);
-            }
+            StartCoroutine(destroyDelay(other));
+
             onTriggered?.Invoke(scaleIncrement, delayIncrement);
 
 
@@ -264,5 +252,50 @@ public class MouthTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         AudioManager.Instance.PlaySound(clipName);
+    }
+
+    IEnumerator destroyDelay(Collider other)
+    {
+
+        if (other.CompareTag("Rat"))
+        {
+
+            //used to release the object from the XR grab before destroying
+            XRGrabInteractable grab = other.GetComponent<XRGrabInteractable>();
+
+            if (grab != null && grab.isSelected)
+            {
+                if (grab.firstInteractorSelecting != null)
+                {
+                    grab.interactionManager.SelectExit(grab.firstInteractorSelecting, grab);
+                }
+            }
+            yield return null;
+
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            if (other.CompareTag("GooDrop"))
+            {
+                int soundToPlay = (int)UnityEngine.Random.Range(1, 8);
+                string soundName = "Absorb" + soundToPlay;
+                AudioManager.Instance.PlaySound(soundName);
+            }
+
+            //used to release the object from the XR grab before destroying
+            XRGrabInteractable grab = other.transform.parent.GetComponent<XRGrabInteractable>();
+
+            if (grab != null && grab.isSelected)
+            {
+                if (grab.firstInteractorSelecting != null)
+                {
+                    grab.interactionManager.SelectExit(grab.firstInteractorSelecting, grab);
+                }
+            }
+            yield return null;
+
+            Destroy(other.transform.parent.gameObject);
+        }
     }
 }
