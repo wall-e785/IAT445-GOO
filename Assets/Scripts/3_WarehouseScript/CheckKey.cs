@@ -25,6 +25,7 @@ public class CheckKey : MonoBehaviour
             if(tag == "WarehouseKey")
             {
                 AudioManager.Instance.PlaySound("Warehouse Door Open");
+                AudioManager.Instance.PlaySound("Escape");
             }
             else if(tag == "BlueKey")
             {
