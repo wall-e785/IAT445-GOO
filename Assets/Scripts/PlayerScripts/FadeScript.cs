@@ -44,6 +44,7 @@ public class FadeScript : MonoBehaviour
         newColor2.a = alphaOut;
         rend.material.SetColor("_Color", newColor2);
 
-
+        yield return null;
+        this.gameObject.SetActive(false);
     }
 }

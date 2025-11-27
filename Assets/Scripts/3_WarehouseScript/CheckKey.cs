@@ -8,8 +8,7 @@ public class CheckKey : MonoBehaviour
 
     [SerializeField] private Animator doorController;
     private bool activated = false;
-    private string tag;
-
+    private string tag; 
     void Awake()
     {
         tag = gameObject.tag;
@@ -38,8 +37,10 @@ public class CheckKey : MonoBehaviour
             }else if(tag == "PinkKey")
             {
                 AudioManager.Instance.PlaySound("Warehouse Door Open");
+                AudioManager.Instance.PlaySound("Take Off");
                 AudioManager.Instance.PlaySound("GodDamnIt");
-                doorController.SetBool("Opening", true);
+                LevelLoader.instance.LoadNextLevel();
+                UIManager.Instance.setThought("FREEDOM!");
             }
         }
     }

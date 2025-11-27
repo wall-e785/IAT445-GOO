@@ -30,7 +30,7 @@ public class PetriManager : MonoBehaviour
         {
             done = true;
             AudioManager.Instance.PlaySound("BurpSmall");
-            LevelLoader.instance.LoadNextLevel();
+            StartCoroutine(loadDelay());
         }
 
     }
@@ -39,6 +39,12 @@ public class PetriManager : MonoBehaviour
     {
         yield return new WaitForSeconds(24);
         introPlaying = false;
+    }
+
+    IEnumerator loadDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        LevelLoader.instance.LoadNextLevel();
     }
 
 }

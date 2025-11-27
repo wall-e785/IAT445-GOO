@@ -70,7 +70,7 @@ public class CafSizeCheck : MonoBehaviour
             {
                 displaying = true;
                 AudioManager.Instance.PlaySound("Negative");
-                StartCoroutine(Display("Goo still hungry... Goo need MORE food..."));
+                StartCoroutine(Display("Goo can’t reach... need MORE food to escape... :/"));
             }
 
         }
