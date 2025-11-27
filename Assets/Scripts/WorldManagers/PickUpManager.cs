@@ -8,14 +8,19 @@ public class PickUpManager : MonoBehaviour
     private string tagName;
     private string clipName;
     private XRGrabInteractable grab;
-    public ParticleSystem affordance = null;
+    public ParticleSystem affordance;
     
 
     void Awake()
     {
         grab = GetComponent<XRGrabInteractable>();
-        grab.selectEntered.AddListener(OnPickedUp);
-        grab.selectExited.AddListener(OnReleased);
+
+        if(grab != null)
+        {
+            grab.selectEntered.AddListener(OnPickedUp);
+            grab.selectExited.AddListener(OnReleased);
+        }
+
         //Debug.Log(grab);
     }
 

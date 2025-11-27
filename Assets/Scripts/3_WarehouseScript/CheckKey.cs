@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+
 
 public class CheckKey : MonoBehaviour
 {
@@ -20,7 +23,7 @@ public class CheckKey : MonoBehaviour
             activated = true;
             doorController.SetBool("Opening", true);
             AudioManager.Instance.PlaySound("ScanCard");
-            Destroy(other.gameObject);
+            StartCoroutine(delayDestroy(other));
 
             if(tag == "WarehouseKey")
             {
@@ -31,11 +34,29 @@ public class CheckKey : MonoBehaviour
             {
                 AudioManager.Instance.PlaySound("Security Room Door Open");
                 UIManager.Instance.setText("Find the Pink Keycard to escape!");
+                AffordanceManager.Instance.progressParticles();
             }else if(tag == "PinkKey")
             {
                 AudioManager.Instance.PlaySound("Warehouse Door Open");
                 AudioManager.Instance.PlaySound("GodDamnIt");
+                doorController.SetBool("Opening", true);
             }
         }
+    }
+
+    IEnumerator delayDestroy(Collider other)
+    {
+        //used to release the object from the XR grab before destroying
+        XRGrabInteractable grab = other.gameObject.GetComponent<XRGrabInteractable>();
+
+        if (grab != null && grab.isSelected)
+        {
+            if (grab.firstInteractorSelecting != null)
+            {
+                grab.interactionManager.SelectExit(grab.firstInteractorSelecting, grab);
+            }
+        }
+        yield return null;
+        Destroy(other.gameObject);
     }
 }
