@@ -8,7 +8,7 @@ public class PickUpManager : MonoBehaviour
     private string tagName;
     private string clipName;
     private XRGrabInteractable grab;
-    public ParticleSystem affordance;
+    public ParticleSystem affordance = null;
     
 
     void Awake()
@@ -72,12 +72,20 @@ public class PickUpManager : MonoBehaviour
     {
         Debug.Log("playing sound");
         AudioManager.Instance.PlaySound(clipName);
-        affordance.Stop();
-        affordance.Clear();
+
+        if(affordance != null)
+        {
+            affordance.Stop();
+            affordance.Clear();
+        }
+
     }
 
     private void OnReleased(SelectExitEventArgs args)
     {
-        affordance.Play();
+        if(affordance != null)
+        {
+            affordance.Play();
+        }
     }
 }
