@@ -26,15 +26,12 @@ public class AffordanceManager : MonoBehaviour
 
     public void progressParticles()
     {
+        curr.Stop();
+        pos++;
         if(pos < ParticleSystems.Length)
         {
-            curr.Stop();
-            pos++;
-            if(pos < ParticleSystems.Length)
-            {
-                curr = ParticleSystems[pos];
-                curr.Play();
-            }
+            curr = ParticleSystems[pos];
+            curr.Play();
         }
     }
 }
