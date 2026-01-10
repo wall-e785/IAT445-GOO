@@ -25,7 +25,7 @@ public class PetriManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("checking");
+        //Debug.Log("checking");
         if (goo1 == null && goo2 == null && goo3 == null && !done && !introPlaying)
         {
             done = true;
