@@ -131,10 +131,10 @@ public class XROriginScale : MonoBehaviour
             cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
             //Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
         }
-        else
-        {
-            Debug.LogWarning("CharacterController not found");
-        }
+        //else
+        //{
+        //    Debug.LogWarning("CharacterController not found");
+        //}
 
         // Adjust Camera Offset height, moves the players view down as origin and the controls shrink. makes it appear smaller
         Transform cameraOffset = transform.Find("Camera Offset");
@@ -146,10 +146,10 @@ public class XROriginScale : MonoBehaviour
             cameraOffset.localPosition = offsetPos;
             //Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
         }
-        else
-        {
-            Debug.LogWarning("Camera Offset not found");
-        }
+        //else
+        //{
+        //    Debug.LogWarning("Camera Offset not found");
+        //}
     }
 
     private void ShrinkPlayer(float amnt)
@@ -164,10 +164,10 @@ public class XROriginScale : MonoBehaviour
             cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
             //Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
         }
-        else
-        {
-            Debug.LogWarning("CharacterController not found");
-        }
+        //else
+        //{
+        //    Debug.LogWarning("CharacterController not found");
+        //}
 
         // Adjust Camera Offset height, moves the players view down as origin and the controls shrink. makes it appear smaller
         Transform cameraOffset = transform.Find("Camera Offset");
@@ -179,9 +179,9 @@ public class XROriginScale : MonoBehaviour
             cameraOffset.localPosition = offsetPos;
             //Debug.Log("Camera Offset height adjusted to: " + offsetPos.y);
         }
-        else
-        {
-            Debug.LogWarning("Camera Offset not found");
-        }
+        //else
+        //{
+        //    Debug.LogWarning("Camera Offset not found");
+        //}
     }
 }
