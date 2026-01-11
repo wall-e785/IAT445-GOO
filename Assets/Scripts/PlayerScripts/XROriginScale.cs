@@ -125,10 +125,10 @@ public class XROriginScale : MonoBehaviour
         // Adjust CharacterController, adjust the height and radius of body manually based off the shrink factor
         CharacterController cc = GetComponent<CharacterController>();
         if (cc != null && cc.height < maxHeight)
-        {
+        {   
             cc.height = cc.height+ amnt;//multiplies the character controller height by shrink factor
             cc.radius = cc.radius+ .001f;//multiplies the character controller body radius by shrink factor
-            cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
+            cc.center = new Vector3(cc.center.x, cc.height/2, cc.center.z);
             //Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
         }
         //else
@@ -161,7 +161,7 @@ public class XROriginScale : MonoBehaviour
         {
             cc.height = cc.height - amnt;//multiplies the character controller height by shrink factor
             cc.radius = cc.radius -.001f;//multiplies the character controller body radius by shrink factor
-            cc.center = new Vector3(cc.center.x, cc.height, cc.center.z);
+            cc.center = new Vector3(cc.center.x, cc.height/2, cc.center.z);
             //Debug.Log($"CharacterController updated: height = {cc.height}, radius = {cc.radius}, center = {cc.center}");
         }
         //else
