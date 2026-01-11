@@ -62,7 +62,7 @@ public class MouthTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Was triggered by: " + other.name + " " + other.tag);
+        //Debug.Log("Was triggered by: " + other.name + " " + other.tag);
 
         float liftAmount = 0f;
         Vector3 scaleIncrement = Vector3.zero;

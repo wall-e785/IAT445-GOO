@@ -68,7 +68,7 @@ public class PickUpManager : MonoBehaviour
                 break;
         }
 
-        Debug.Log(tagName);
+        //Debug.Log(tagName);
     }
 
     private void OnPickedUp(SelectEnterEventArgs args)

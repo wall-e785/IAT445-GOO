@@ -5383,7 +5383,7 @@ PrefabInstance:
       addedObject: {fileID: 401282168}
     - targetCorrespondingSourceObject: {fileID: 4483397428621078262, guid: d5d787b8a2e39b24d8a9c7e01c2506a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 401282173}
+      addedObject: {fileID: 401282177}
   m_SourcePrefab: {fileID: 100100000, guid: d5d787b8a2e39b24d8a9c7e01c2506a6, type: 3}
 --- !u!1 &401282157 stripped
 GameObject:
@@ -5424,7 +5424,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401282157}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -5557,8 +5557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
   affordance: {fileID: 0}
---- !u!64 &401282173
-MeshCollider:
+--- !u!65 &401282177
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5575,10 +5575,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4645665985548484491, guid: 679a59470953c6340bac29c49eac3d5a, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 1.2000006, y: 1.3578216, z: 0.7670992}
+  m_Center: {x: -2.4014682e-19, y: 0.68536144, z: 0.000042159503}
 --- !u!1001 &415846418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5609,7 +5608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13358,7 +13357,7 @@ PrefabInstance:
       addedObject: {fileID: 995836134}
     - targetCorrespondingSourceObject: {fileID: 8475159986392234809, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 995836139}
+      addedObject: {fileID: 995836143}
   m_SourcePrefab: {fileID: 100100000, guid: 3d857058e8b1b3c45ab3e349a6980690, type: 3}
 --- !u!1 &995836123 stripped
 GameObject:
@@ -13399,7 +13398,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995836123}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -13532,8 +13531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpManager
   affordance: {fileID: 0}
---- !u!64 &995836139
-MeshCollider:
+--- !u!65 &995836143
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -13550,10 +13549,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -196126059349096977, guid: 90d6476a0035d7d43ac582eb79b654ce, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.600001, y: 1.1403137, z: 0.7670149}
+  m_Center: {x: 0.00000010430813, y: 0.56343657, z: -0.016492667}
 --- !u!1 &996891172
 GameObject:
   m_ObjectHideFlags: 0
